@@ -1,7 +1,7 @@
 # Testing
 
 ## Goals
-Be able to test the correctness and performance of the
+Be able to test the correctness of the
  - `aim engine`
  - `aim sdk`
  - `aim ql`
@@ -11,12 +11,15 @@ Be able to test the correctness and performance of the
 
 ```
 tests
-  perf_tests/
+  engine
     test_*.py
-  unit_tests
+  sdk
+    test_*.py
+  ql
+    test_*.py
+  ext
     test_*.py
 ```
 
 ## Run
-Run unit-tests via command `pytest tests/unit_tests` in the root folder.
-Run performance tests via command `pytest tests/perf_tests` in the root folder.
+Run tests via command `python -m unittest discover -s tests` in the root folder.

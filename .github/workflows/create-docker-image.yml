@@ -29,6 +29,7 @@ jobs:
         run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
 
       - name: Build & Push aim image
+        working-directory: ./docker
         env:
           AIM_VERSION: ${{ github.event.inputs.pkg_version }}
-        run: . ./.github/workflow_files/create-docker-image.sh
+        run: . create-docker-image.sh

@@ -15,7 +15,6 @@ export interface ITextProps
   textTransform?: CSS['textTransform'];
   lineHeight?: CSS['lineHeight'];
   css?: CSS;
-  htmlFor?: string;
 }
 
 export type typographyType =
@@ -39,5 +38,4 @@ export type typographyType =
   | 's'
   | 'samp'
   | 'sub'
-  | 'sup'
-  | 'label';
+  | 'sup';

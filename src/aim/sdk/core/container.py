@@ -92,9 +92,8 @@ class Container(ABCContainer):
     def __init_subclass__(cls, **kwargs):
         super().__init_subclass__(**kwargs)
         typename = cls.get_typename()
-        if typename in cls.registry:  # check for name conflicts
-            logger.warning(f'Container registry already has typename \'{typename}\' registered.')
-        cls.registry[typename].append(cls)
+        if typename is not None:  # check for intermediate helper classes
+            cls.registry[typename] = cls
 
     def __init__(self, hash_: Optional[str] = None, *,
                  repo: Optional[Union[str, 'Repo']] = None,

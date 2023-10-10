@@ -15,7 +15,7 @@ class Sequence(object):
 
     @property
     @abstractmethod
-    def type(self) -> str:
+    def item_type(self) -> str:
         ...
 
     @property

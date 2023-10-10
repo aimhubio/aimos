@@ -850,16 +850,16 @@ class NumberInput(Component):
 
 
 class Select(Component):
-    def __init__(self, options=(), value=None, key=None, block=None):
+    def __init__(self, value=None, values=None, options=[], key=None, block=None):
         component_type = "Select"
         component_key = update_viz_map(component_type, key)
         super().__init__(component_key, component_type, block)
 
-        self.default = value
+        self.data = value or values
 
         self.options = {
-            "isMulti": False,
             "value": self.value,
+            "values": self.values,
             "options": options
         }
 
@@ -871,45 +871,26 @@ class Select(Component):
 
     @property
     def value(self):
-        return self.state["value"] if "value" in self.state else self.default
-
-    async def on_change(self, val, index):
-        self.set_state({"value": val})
-
-
-class MultiSelect(Component):
-    def __init__(self, options=(), value=None, key=None, block=None):
-        component_type = "Select"
-        component_key = update_viz_map(component_type, key)
-        super().__init__(component_key, component_type, block)
-
-
-        self.default = value
-
-        self.options = {
-            "isMulti": True,
-            "value": self.value,
-            "options": options
-        }
-
-        self.callbacks = {
-            "on_change": self.on_change
-        }
-
-        self.render()
+        return self.state["value"] if "value" in self.state else self.data
 
     @property
-    def value(self):
-        return self.state["value"] if "value" in self.state else self.default
+    def values(self):
+        return self.state["values"] if "values" in self.state else self.data
 
-    async def on_change(self, val, index):
-        if type(self.value) is list:
-            if val in self.value:
-                value = list(filter(lambda item: item != val, self.value))
+    async def on_change(self, key):
+        if type(self.values) is list:
+            if key in self.values:
+                values = list(filter(lambda item: item != key, self.values))
             else:
-                value = self.value + [val]
+                values = self.values + [key]
 
-            self.set_state({"value": value})
+            self.set_state({
+                "values": values
+            })
+        else:
+            self.set_state({
+                "value": key
+            })
 
 
 class Button(Component):
@@ -1156,11 +1137,7 @@ class UI:
 
     def select(self, *args, **kwargs):
         select = Select(*args, **kwargs, block=self.block_context)
-        return select.value
-
-    def multi_select(self, *args, **kwargs):
-        multi_select = MultiSelect(*args, **kwargs, block=self.block_context)
-        return multi_select.value
+        return select.values if type(select.values) is list else select.value
 
     def slider(self, *args, **kwargs):
         slider = Slider(*args, **kwargs, block=self.block_context)

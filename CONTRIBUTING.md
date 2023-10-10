@@ -59,8 +59,9 @@ The majority of the Aim product areas is developed in Python/Cython. This includ
 ### Developing Storage/SDK/CLI
 
 Most of the backend components, including SDK, Storage, Web APIs and CLI are developed using Python/Cython.
-In order to start development you must install aim dependencies, and the aim package itself, in editable mode.
+In order to start development you must install dev requirements and the aim package itself, in editable mode.
 ```shell
+pip install -r requirements.dev.txt
 pip install -e .
 ```
 
@@ -81,14 +82,14 @@ as a check on GitHub Actions when new PR opened.
 
 New unit-tests must be added along with the code changes. In order to setup the testing environment
 ```shell
-cd tests/unit_tests
+cd tests
 pip install -r requirements.txt
 ```
 
-Aim python code unit-tests are located at `tests/unit_tests` directory. Unit-tests are written in Python's `unittest` package style.
+Aim python code unit-tests are located at `tests/` directory. Unit-tests are written in Python's `unittest` package style.
 [Pytest](https://docs.pytest.org) is used as a test runner/discovery tool. To make sure unit-tests are not failing run
 ```shell
-pytest tests/unit_tests
+pytest tests/
 ```
 
 ### Developing UI
@@ -107,7 +108,7 @@ Before running the Aim UI dev server or building a distributable wheel, install 
 dependencies via:
 
 ```shell
-cd src/aim/web/ui
+cd aim/web/ui
 npm install
 ```
 
@@ -143,6 +144,7 @@ Aim documentation is built using [Sphix](https://www.sphinx-doc.org) and is host
 The documentation sources are located at `docs/` directory. In order to build documentation locally
 run the following commands
 ```shell
+pip install -r requirements.dev.txt
 cd docs
 pip install -r requirements.txt
 make html

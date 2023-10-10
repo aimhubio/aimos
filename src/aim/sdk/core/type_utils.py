@@ -1,6 +1,5 @@
 import os
 
-from collections import defaultdict
 from typing import Iterator, Tuple, Type, Optional, Any, TypeVar, Union
 
 try:
@@ -90,9 +89,9 @@ def get_sequence_value_types(seq_type: Type['Sequence']) -> Tuple[str, ...]:
 def auto_registry(cls):
     @classmethod
     def get_typename_fn(cls_):
-        if hasattr(cls_, '__aim_package__'):
-            return f'{cls_.__aim_package__}.{cls_.__name__}'
-        return cls_.__name__
+        if hasattr(cls_, '__aim_module__'):
+            return f'{cls_.__aim_module__}.{cls_.__name__}'
+        return cls.__name__
 
     @classmethod
     def get_full_typename_fn(cls_):
@@ -106,8 +105,7 @@ def auto_registry(cls):
 
     cls.get_typename = get_typename_fn
     cls.get_full_typename = get_full_typename_fn
-    cls.registry = defaultdict(list)
-    cls.registry[cls.get_typename()].append(cls)
+    cls.registry = {cls.get_typename(): cls}
     cls.default_aliases = set()
     cls.object_category = cls.get_typename()
 

@@ -32,8 +32,7 @@ const IndicatorWrapper = styled('span', {
 });
 
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {
-  size: '$1',
-  minHeight: '$1',
+  size: '20px',
   border: 'unset',
   bc: 'transparent',
   borderRadius: '$2',

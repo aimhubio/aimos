@@ -21,7 +21,7 @@ import {
  * @example
  * <Checkbox checked={true} />
  */
-export const Checkbox = React.forwardRef<
+export const CheckBox = React.forwardRef<
   React.ElementRef<typeof StyledCheckbox>,
   ICheckboxProps
 >(
@@ -75,5 +75,5 @@ export const Checkbox = React.forwardRef<
   },
 );
 
-Checkbox.displayName = 'Checkbox';
-export default React.memo(Checkbox);
+CheckBox.displayName = 'CheckBox';
+export default React.memo(CheckBox);

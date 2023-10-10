@@ -36,7 +36,6 @@ function Illustration({
   className = '',
   size = 'xLarge',
   showImage = true,
-  children,
 }: IIllustrationProps): React.FunctionComponentElement<React.ReactNode> {
   return (
     <div className={classNames('Illustration', { [className]: !!className })}>
@@ -57,7 +56,6 @@ function Illustration({
         >
           {content}
         </Text>
-        {children}
       </div>
     </div>
   );

@@ -102,7 +102,7 @@
 .block--row {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  flex: 1;
   justify-content: center;
   gap: $space-xs;
   flex-wrap: wrap;
@@ -114,17 +114,6 @@
   flex: 1;
   justify-content: center;
   gap: $space-xs;
-}
-
-.block--tabs {
-  width: 100%;
-}
-
-.block--tab {
-  width: 100%;
-  height: calc(500px + 2 * #{$space-xs});
-  padding: $space-xs;
-  overflow: auto;
 }
 
 .BoardVisualizer__main__components__console {

@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 import yaml
 
-from aim import Record
+from aimos import Record
 
 try:
     from dvc.repo import Repo

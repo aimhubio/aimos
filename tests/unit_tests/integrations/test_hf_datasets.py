@@ -13,7 +13,7 @@ class TestHFDatasetsIntegration(TestBase):
         from datasets import load_dataset
 
         from aimstack.ml.models.hf_datasets_metadata import HFDataset
-        from aim.sdk import Run
+        from aimos.sdk import Run
 
         # create dataset object
         dataset = load_dataset("rotten_tomatoes")

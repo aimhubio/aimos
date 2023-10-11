@@ -2,8 +2,8 @@ import click
 import pathlib
 import shutil
 
-from aim import Repo
-from aim._sdk.configs import get_aim_repo_name, get_data_version
+from aimos import Repo
+from aimos._sdk.configs import get_aim_repo_name, get_data_version
 from aimcore.cli.migrate import utils
 
 

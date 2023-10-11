@@ -8,15 +8,15 @@ from typing import TYPE_CHECKING
 
 from fastapi import HTTPException
 
-from aim._sdk.context import Context
-from aim._sdk import Run
+from aimos._sdk.context import Context
+from aimos._sdk import Run
 from aimcore.web.api.utils import collect_streamable_data, get_project_repo, checked_range
 from aimcore.web.configs import AIM_PROGRESS_REPORT_INTERVAL
 from aimcore.web.api.runs.pydantic_models import AlignedRunIn, TraceBase
-from aim._core.storage.treeutils import encode_tree
+from aimos._core.storage.treeutils import encode_tree
 
 if TYPE_CHECKING:
-    from aim import Repo
+    from aimos import Repo
 
 # added to progress keys to escape buffering due to gzipping responses
 PROGRESS_KEY_SUFFIX = ''.join([str(hash(random.random())) for _ in range(2000)])

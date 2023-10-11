@@ -54,7 +54,7 @@ ui.code("""
 # Write simple values
 ####################################
 
-from aim import Container, Sequence
+from aimos import Container, Sequence
 
 # Create a Container object, writing to default repository 
 c = Container()
@@ -85,7 +85,7 @@ ui.code("""
 ####################################
 # Query containers and sequences
 ####################################
-from aim import Repo
+from aimos import Repo
 
 # Open repository in read-only mode
 r = Repo.from_path('.', read_only=True)

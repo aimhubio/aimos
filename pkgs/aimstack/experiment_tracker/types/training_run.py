@@ -1,5 +1,5 @@
 from aimstack.base import Run as BaseRun
-from aim import Property
+from aimos import Property
 
 
 class TrainingRun(BaseRun):

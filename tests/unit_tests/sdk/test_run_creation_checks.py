@@ -1,6 +1,6 @@
 from unit_tests.base import TestBase
 
-from aim.sdk.run import Run
+from aimos.sdk.run import Run
 
 
 class TestRunCreationChecks(TestBase):
@@ -28,7 +28,7 @@ class TestRunCreationChecks(TestBase):
 
     # TODO [deprecation] Uncomment the line below
     # def test_open_non_existing_run_raises_error(self):
-    #     from aim.sdk.errors import MissingRunError
+    #     from aimos.sdk.errors import MissingRunError
     #     with self.assertRaises(MissingRunError):
     #         non_existing_run_hash = '111111111111000000000000'
     #         Run(non_existing_run_hash)

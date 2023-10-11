@@ -11,9 +11,9 @@ from itertools import chain, repeat
 from typing import List
 import numpy as np
 
-from aim._sdk.num_utils import inst_has_typename
-from aim import Record
-from aim._sdk.blob import BLOB
+from aimos._sdk.num_utils import inst_has_typename
+from aimos import Record
+from aimos._sdk.blob import BLOB
 
 logger = logging.getLogger(__name__)
 

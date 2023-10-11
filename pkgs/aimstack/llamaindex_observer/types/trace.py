@@ -13,7 +13,7 @@ Classes:
     Trace: Represents a LlamaIndex execution, stores its metadata and sequences of actions.
 """
 
-from aim import Container
+from aimos import Container
 
 
 class Trace(Container):

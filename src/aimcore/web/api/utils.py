@@ -8,14 +8,14 @@ from fastapi.types import DecoratedCallable
 
 from typing import Any, Callable, Iterator, Tuple, List
 
-from aim._core.storage.treeutils import encode_tree
-from aim._sdk.query import syntax_error_check
-from aim._sdk.uri_service import URIService
+from aimos._core.storage.treeutils import encode_tree
+from aimos._sdk.query import syntax_error_check
+from aimos._sdk.uri_service import URIService
 from aimcore.web.api.projects.project import Project
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from aim import Repo
+    from aimos import Repo
 
 
 class APIRouter(FastAPIRouter):

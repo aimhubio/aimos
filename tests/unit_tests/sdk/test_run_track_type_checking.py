@@ -1,7 +1,7 @@
 from unit_tests.base import TestBase
 
-from aim.sdk.run import Run
-from aim.sdk.context import Context
+from aimos.sdk.run import Run
+from aimos.sdk.context import Context
 
 
 class TestRunSequenceHomogeneousValues(TestBase):

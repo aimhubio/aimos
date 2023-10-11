@@ -6,7 +6,7 @@ from unit_tests.utils import generate_image_set
 from parameterized import parameterized
 import datetime
 
-from aim.sdk.run import Run
+from aimos.sdk.run import Run
 
 
 class TestProjectApi(PrefilledDataApiTestBase):

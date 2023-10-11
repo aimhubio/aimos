@@ -15,7 +15,7 @@ ui.html("""
     The following example demonstrates how to use the extended Container types. First lets define a class Run:
 """)
 ui.code("""
-from aim import Container
+from aimos import Container
 
 class Run(Container):
     @property
@@ -48,7 +48,7 @@ ui.html("""
 """)
 
 ui.code("""
-from aim import Repo
+from aimos import Repo
 
 repo = Repo.default()
 
@@ -70,7 +70,7 @@ ui.html("""
 """)
 
 ui.code("""
-from aim import Sequence
+from aimos import Sequence
 import pandas as pd
 
 

@@ -11,7 +11,7 @@ import weakref
 import queue
 
 from typing import Any
-from aim import Audio, Image, Distribution
+from aimos import Audio, Image, Distribution
 
 
 def _decode_histogram(value):

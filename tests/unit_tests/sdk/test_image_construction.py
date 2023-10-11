@@ -3,7 +3,7 @@ import pytest
 from unit_tests.base import TestBase
 from unit_tests.utils import is_package_installed
 
-from aim.sdk import Image
+from aimos.sdk import Image
 import numpy as np
 
 

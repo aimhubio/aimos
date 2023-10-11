@@ -3,7 +3,7 @@ from difflib import SequenceMatcher
 from logging import getLogger
 from typing import Dict, List, Optional
 
-from aim._sdk.num_utils import is_number
+from aimos._sdk.num_utils import is_number
 from aimstack.experiment_tracker import TrainingRun
 
 try:

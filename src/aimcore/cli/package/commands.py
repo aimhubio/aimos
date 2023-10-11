@@ -2,8 +2,8 @@ import click
 import pathlib
 import tabulate
 
-from aim import Repo
-from aim._sdk.package_utils import Package
+from aimos import Repo
+from aimos._sdk.package_utils import Package
 
 from .utils import init_template, pyproject_toml_template, get_pkg_distribution_sources
 from .watcher import PackageSourceWatcher

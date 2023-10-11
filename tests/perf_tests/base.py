@@ -1,7 +1,7 @@
 import unittest
 import os
 
-from aim.sdk.configs import AIM_REPO_NAME
+from aimos.sdk.configs import AIM_REPO_NAME
 from tests.perf_tests.conftest import TEST_REPO_PATHS
 
 

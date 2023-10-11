@@ -2,7 +2,7 @@ import os
 import click
 
 from aimcore.cli.utils import set_log_level, start_uvicorn_app, get_free_port_num
-from aim._sdk.repo import Repo
+from aimos._sdk.repo import Repo
 from aimcore.transport.config import (
     AIM_SERVER_DEFAULT_HOST,
     AIM_SERVER_DEFAULT_PORT,
@@ -10,7 +10,7 @@ from aimcore.transport.config import (
     AIM_SERVER_BASE_PATH
 )
 
-from aim._ext.tracking import analytics
+from aimos._ext.tracking import analytics
 
 
 @click.command('server')
@@ -90,7 +90,7 @@ def server(host, port,
     del repo_inst
 
     if dev:
-        import aim
+        import aimos
         import aimcore
 
         reload_dirs = [os.path.dirname(aim.__file__), os.path.dirname(aimcore.__file__), dev_package_dir]

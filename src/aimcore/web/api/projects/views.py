@@ -10,7 +10,7 @@ from aimcore.web.api.projects.pydantic_models import (
     ProjectPackagesApiOut
 )
 from aimcore.web.utils import load_active_packages
-from aim._ext.tracking import analytics
+from aimos._ext.tracking import analytics
 
 projects_router = APIRouter()
 
@@ -47,7 +47,7 @@ async def project_info_api(sequence: Optional[Tuple[str, ...]] = Query(default=(
 @projects_router.get('/packages/', response_model=ProjectPackagesApiOut)
 async def project_packages_api(names_only: Optional[bool] = False,
                                packages=Depends(load_active_packages)):
-    from aim._sdk.package_utils import Package
+    from aimos._sdk.package_utils import Package
     if not names_only:
         return {
             pkg.name: {

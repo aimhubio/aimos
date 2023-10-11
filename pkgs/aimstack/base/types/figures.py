@@ -2,9 +2,9 @@ import io
 import logging
 import os.path
 
-from aim import Record
-from aim._sdk.num_utils import inst_has_typename
-from aim._sdk.blob import BLOB
+from aimos import Record
+from aimos._sdk.num_utils import inst_has_typename
+from aimos._sdk.blob import BLOB
 
 
 logger = logging.getLogger(__name__)

@@ -5,14 +5,14 @@ import logging
 
 from functools import partialmethod
 
-from aim import Container, Sequence, Property
-from aim._sdk.utils import utc_timestamp
-from aim._sdk import type_utils
+from aimos import Container, Sequence, Property
+from aimos._sdk.utils import utc_timestamp
+from aimos._sdk import type_utils
 from aimcore.callbacks import Caller
 from aimcore.callbacks import events
-from aim._ext.system_info import utils as system_utils
-from aim._sdk.constants import ContainerOpenMode, KeyNames
-from aim._sdk.num_utils import is_number
+from aimos._ext.system_info import utils as system_utils
+from aimos._sdk.constants import ContainerOpenMode, KeyNames
+from aimos._sdk.num_utils import is_number
 
 from .logging import (
     LogLine,
@@ -32,7 +32,7 @@ from typing import Optional, Union, List, Tuple, Dict, Any, Type
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from aim import Repo
+    from aimos import Repo
 
 
 @type_utils.query_alias('run')
@@ -178,7 +178,7 @@ class Run(Container, Caller):
             data['duration'] = self.duration
 
         if include_params:
-            from aim._core.storage import treeutils
+            from aimos._core.storage import treeutils
             for path, val in treeutils.unfold_tree(self[...],
                                                    unfold_array=False,
                                                    depth=3):

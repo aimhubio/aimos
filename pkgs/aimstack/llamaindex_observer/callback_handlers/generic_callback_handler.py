@@ -1,6 +1,6 @@
 from typing import Optional, Any, Dict, List
 
-from aim import Repo
+from aimos import Repo
 
 try:
     from llama_index.callbacks.base_handler import BaseCallbackHandler

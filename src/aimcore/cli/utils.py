@@ -1,6 +1,6 @@
 import os
 import logging
-from aim._sdk.configs import AIM_LOG_LEVEL_KEY
+from aimos._sdk.configs import AIM_LOG_LEVEL_KEY
 
 
 def set_log_level(log_level):

@@ -2,9 +2,9 @@ import os
 
 from unit_tests.base import TestBase
 
-from aim.sdk import Run
-from aim.sdk.context import Context
-from aim.core.storage.hashing import hash_auto
+from aimos.sdk import Run
+from aimos.sdk.context import Context
+from aimos.core.storage.hashing import hash_auto
 
 
 class TestRunContainerData(TestBase):

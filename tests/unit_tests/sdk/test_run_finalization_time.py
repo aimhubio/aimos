@@ -2,7 +2,7 @@ import time
 
 from unit_tests.base import TestBase
 
-from aim.sdk.run import Run
+from aimos.sdk.run import Run
 
 
 class TestRunFinalizedAt(TestBase):

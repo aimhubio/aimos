@@ -3,8 +3,8 @@ import numpy as np
 
 from unit_tests.base import TestBase
 
-from aim.sdk import Repo, Run
-from aim.sdk.types import QueryReportMode
+from aimos.sdk import Repo, Run
+from aimos.sdk.types import QueryReportMode
 
 
 class TestRunMetricNumpyTypes(TestBase):

@@ -5,9 +5,9 @@ from tempfile import TemporaryDirectory
 import click
 from tqdm import tqdm
 
-from aim import Run
-from aim._ext.system_info.log import LogLine
-from aim._ext.system_info import AIM_RESOURCE_METRIC_PREFIX
+from aimos import Run
+from aimos._ext.system_info.log import LogLine
+from aimos._ext.system_info import AIM_RESOURCE_METRIC_PREFIX
 
 
 def parse_wandb_logs(repo_inst, entity, project, run_id):

@@ -2,8 +2,8 @@ import unittest
 from fastapi.testclient import TestClient
 
 from unit_tests.utils import truncate_api_db, full_class_name, fill_up_test_data
-from aim.sdk.repo import Repo
-from aim.sdk.run import Run
+from aimos.sdk.repo import Repo
+from aimos.sdk.run import Run
 
 from aimcore.web.run import app
 

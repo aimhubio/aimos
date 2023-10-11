@@ -1,6 +1,6 @@
 import time
 
-from aim.ext.system_info.log import LogLine
+from aimos.ext.system_info.log import LogLine
 from aimstack.tensorboard_tracker.run import Run as TensorboardRun
 
 from unit_tests.base import TestBase

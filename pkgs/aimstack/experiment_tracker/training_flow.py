@@ -66,7 +66,7 @@ class TrainingFlow(Caller):
         exception: Exception,
         **kwargs
     ):
-        """Is called when exception is raised from Aim codebase. """
+        """Is called when exception is raised from aimos codebase. """
 
     def handle_exceptions(self):
         from aimcore.error_handling import set_exception_callback

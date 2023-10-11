@@ -1,1 +1,1 @@
-import aim  # noqa F401
+import aimos  # noqa F401

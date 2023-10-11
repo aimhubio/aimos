@@ -1,7 +1,7 @@
 import os
 import sys
 
-from aim._sdk.configs import AIM_ENV_MODE_KEY
+from aimos._sdk.configs import AIM_ENV_MODE_KEY
 
 
 def build_db_upgrade_command():

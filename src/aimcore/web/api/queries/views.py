@@ -4,8 +4,8 @@ from fastapi.responses import StreamingResponse
 from fastapi import Depends, HTTPException
 
 from typing import Optional, Iterable, Dict, List, Iterator, TYPE_CHECKING
-from aim._sdk.uri_service import URIService
-from aim.utils import sequence_data, container_data
+from aimos._sdk.uri_service import URIService
+from aimos.utils import sequence_data, container_data
 
 from aimcore.web.utils import load_active_packages
 from aimcore.web.api.runs.pydantic_models import QuerySyntaxErrorOut
@@ -16,14 +16,14 @@ from aimcore.web.api.utils import (
     APIRouter  # wrapper for fastapi.APIRouter
 )
 
-from aim import Container, Sequence
+from aimos import Container, Sequence
 
-from aim._core.storage.treeutils import encode_tree
+from aimos._core.storage.treeutils import encode_tree
 
 query_router = APIRouter()
 
 if TYPE_CHECKING:
-    from aim._sdk.repo import Repo
+    from aimos._sdk.repo import Repo
 
 
 async def sequence_search_result_streamer(repo: 'Repo',
@@ -194,7 +194,7 @@ async def fetch_blobs_api(uri_batch: URIBatchIn):
 
 @query_router.post('/run/')
 async def run_action(action_name: str, request_data: Dict, packages=Depends(load_active_packages)):
-    from aim._sdk.action import Action
+    from aimos._sdk.action import Action
     action = Action.registry[action_name]
     is_generator = action.is_generator
     if is_generator:

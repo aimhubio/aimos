@@ -3,8 +3,8 @@ import struct
 import json
 from typing import Iterator, Tuple
 
-from aim._core.storage.object import CustomObject
-from aim._core.storage.types import BLOB
+from aimos._core.storage.object import CustomObject
+from aimos._core.storage.types import BLOB
 
 
 def pack_args(tree: Iterator[Tuple[bytes, bytes]]) -> bytes:

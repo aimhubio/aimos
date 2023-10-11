@@ -7,9 +7,9 @@ import logging
 
 from typing import Dict, Optional
 
-from aim import Repo
-from aim._core.storage.rockscontainer import RocksContainer
-from aim._core.storage.treeview import TreeView
+from aimos import Repo
+from aimos._core.storage.rockscontainer import RocksContainer
+from aimos._core.storage.treeview import TreeView
 from aimstack.base import Run, SystemMetric, Metric
 
 logger = logging.getLogger(__name__)

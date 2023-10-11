@@ -4,8 +4,8 @@ import logging
 from inspect import getframeinfo, currentframe
 from typing import Optional, Tuple
 
-from aim._core.storage.hashing import hash_auto
-from aim import Record
+from aimos._core.storage.hashing import hash_auto
+from aimos import Record
 from aimstack.base.types.text import Text
 
 

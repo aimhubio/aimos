@@ -1,7 +1,7 @@
 import numpy as np
 
-from aim import Record
-from aim._sdk.blob import BLOB
+from aimos import Record
+from aimos._sdk.blob import BLOB
 
 
 @Record.alias('aim.distribution')

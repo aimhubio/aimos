@@ -17,7 +17,7 @@ Classes:
 from typing import List
 from dataclasses import asdict
 
-from aim import Sequence, Record
+from aimos import Sequence, Record
 
 from aimstack.llamaindex_observer.types.action import LlamaAction
 

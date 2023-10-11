@@ -2,7 +2,7 @@ import click
 import tabulate
 
 from aimcore.cli.conatiners.utils import match_runs
-from aim._sdk.repo import Repo
+from aimos._sdk.repo import Repo
 
 
 @click.group()
@@ -85,7 +85,7 @@ def remove_containers(ctx, hashes, yes):
         confirmed = True
     else:
         confirmed = click.confirm(f'This command will permanently delete {len(matched_hashes)} containers'
-                                  f' from aim repo located at \'{repo_path}\'. Do you want to proceed?')
+                                  f' from aimos repo located at \'{repo_path}\'. Do you want to proceed?')
     if not confirmed:
         return
 
@@ -173,7 +173,7 @@ def close_containers(ctx, hashes, yes):
         click.echo('Please specify at least one Container to close.')
         exit(1)
 
-    click.secho(f'This command will forcefully close {len(hashes)} Containers from Aim Repo \'{repo_path}\'. '
+    click.secho(f'This command will forcefully close {len(hashes)} Containers from aimos Repo \'{repo_path}\'. '
                 f'Please make sure Containers are not active.')
     if yes:
         confirmed = True

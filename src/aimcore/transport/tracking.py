@@ -7,7 +7,7 @@ from fastapi import WebSocket, Request, APIRouter
 from fastapi.responses import StreamingResponse, JSONResponse
 
 import aimcore.transport.message_utils as utils
-from aim._core.storage.treeutils import encode_tree, decode_tree
+from aimos._core.storage.treeutils import encode_tree, decode_tree
 
 logger = logging.getLogger(__name__)
 

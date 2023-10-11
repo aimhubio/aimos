@@ -4,9 +4,9 @@ import random
 from unit_tests.base import ApiTestBase
 from unit_tests.utils import decode_encoded_tree_stream, generate_image_set
 
-from aim.core.storage.treeutils import decode_tree
-from aim.sdk.context import Context
-from aim.sdk.run import Run
+from aimos.core.storage.treeutils import decode_tree
+from aimos.sdk.context import Context
+from aimos.sdk.run import Run
 
 
 class TestNoImagesRunQueryApi(ApiTestBase):

@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
 
-from aim._sdk.configs import get_aim_repo_name
+from aimos._sdk.configs import get_aim_repo_name
 
 from aimcore.web.configs import AIM_PROFILER_KEY
 from aimcore.web.middlewares.profiler import PyInstrumentProfilerMiddleware

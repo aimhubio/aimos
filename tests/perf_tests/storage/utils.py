@@ -1,7 +1,7 @@
-from aim import Repo
-from aim.sdk.configs import get_aim_repo_name
-from aim.sdk.types import QueryReportMode
-from aim.core.storage.rockscontainer import RocksContainer
+from aimos import Repo
+from aimos.sdk.configs import get_aim_repo_name
+from aimos.sdk.types import QueryReportMode
+from aimos.core.storage.rockscontainer import RocksContainer
 
 from tests.perf_tests.utils import timing
 

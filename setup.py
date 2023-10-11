@@ -17,8 +17,8 @@ with open(version_file) as vf:
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Package meta-data.
-NAME = 'aim'
-DESCRIPTION = 'A super-easy way to record, search and compare AI experiments.'
+NAME = 'aimos'
+DESCRIPTION = 'An easy-to-use modular observability for AI Systems. Extensible, scalable and modular.'
 VERSION = __version__
 REQUIRES_PYTHON = '>=3.7.0'
 

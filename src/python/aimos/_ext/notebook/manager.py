@@ -75,7 +75,7 @@ def run_up(args):
         ManagerActionStatuses.Failed,
         {
             'message': '\nPerhaps this is a bug from aimos side.'
-                       '\nPlease open an issue https://github.com/aimhubio/aim/issues.'
+                       '\nPlease open an issue https://github.com/aimhubio/aimos/issues.'
         }
     )
 

@@ -41,7 +41,7 @@ const Template: ComponentStory<typeof ToastComponent> = (args: any) => {
       icon: <IconCheck />,
       message:
         args.message ||
-        'Aim is an open-source, self-hosted ML experiment tracking tool',
+        'AimOS is an easy-to-use modular observability for AI Systems. Extensible, scalable and modular.',
       onDelete: () => {
         setNotifications((notifications) =>
           notifications.filter((n) => n.id !== id),

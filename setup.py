@@ -9,7 +9,7 @@ from aimrocks import lib_utils
 # TODO This `setup.py` assumes that `Cython` and `aimrocks` are installed.
 # This is okay for now as users are expected to install `aim` from wheels.
 
-version_file = 'src/python/aim/VERSION'
+version_file = 'src/python/aimos/VERSION'
 
 with open(version_file) as vf:
     __version__ = vf.read().strip()
@@ -33,7 +33,7 @@ def package_files(directory):
 
 
 aimcore_migration_files = package_files('src/aimcore/web/migrations')
-notifier_files = package_files('src/python/aim/_ext/notifier')
+notifier_files = package_files('src/python/aimos/_ext/notifier')
 
 readme_file = 'README.md'
 readme_text = open('/'.join((here, readme_file)), encoding="utf-8").read()
@@ -129,23 +129,23 @@ COMPILE_ARGS = [
     '-fPIC'
 ]
 CYTHON_SCRITPS = [
-    ('aim._core.storage.hashing.c_hash', 'src/python/aim/_core/storage/hashing/c_hash.pyx'),
-    ('aim._core.storage.hashing.hashing', 'src/python/aim/_core/storage/hashing/hashing.py'),
-    ('aim._core.storage.hashing', 'src/python/aim/_core/storage/hashing/__init__.py'),
-    ('aim._core.storage.encoding.encoding_native', 'src/python/aim/_core/storage/encoding/encoding_native.pyx'),
-    ('aim._core.storage.encoding.encoding', 'src/python/aim/_core/storage/encoding/encoding.pyx'),
-    ('aim._core.storage.encoding', 'src/python/aim/_core/storage/encoding/__init__.py'),
-    ('aim._core.storage.treeutils', 'src/python/aim/_core/storage/treeutils.pyx'),
-    ('aim._core.storage.rockscontainer', 'src/python/aim/_core/storage/rockscontainer.pyx'),
-    ('aim._core.storage.union', 'src/python/aim/_core/storage/union.pyx'),
-    ('aim._core.storage.arrayview', 'src/python/aim/_core/storage/arrayview.py'),
-    ('aim._core.storage.treearrayview', 'src/python/aim/_core/storage/treearrayview.py'),
-    ('aim._core.storage.treeview', 'src/python/aim/_core/storage/treeview.py'),
-    ('aim._core.storage.utils', 'src/python/aim/_core/storage/utils.py'),
-    ('aim._core.storage.container', 'src/python/aim/_core/storage/container.py'),
-    ('aim._core.storage.containertreeview', 'src/python/aim/_core/storage/containertreeview.py'),
-    ('aim._core.storage.inmemorytreeview', 'src/python/aim/_core/storage/inmemorytreeview.py'),
-    ('aim._core.storage.prefixview', 'src/python/aim/_core/storage/prefixview.py'),
+    ('aim._core.storage.hashing.c_hash', 'src/python/aimos/_core/storage/hashing/c_hash.pyx'),
+    ('aim._core.storage.hashing.hashing', 'src/python/aimos/_core/storage/hashing/hashing.py'),
+    ('aim._core.storage.hashing', 'src/python/aimos/_core/storage/hashing/__init__.py'),
+    ('aim._core.storage.encoding.encoding_native', 'src/python/aimos/_core/storage/encoding/encoding_native.pyx'),
+    ('aim._core.storage.encoding.encoding', 'src/python/aimos/_core/storage/encoding/encoding.pyx'),
+    ('aim._core.storage.encoding', 'src/python/aimos/_core/storage/encoding/__init__.py'),
+    ('aim._core.storage.treeutils', 'src/python/aimos/_core/storage/treeutils.pyx'),
+    ('aim._core.storage.rockscontainer', 'src/python/aimos/_core/storage/rockscontainer.pyx'),
+    ('aim._core.storage.union', 'src/python/aimos/_core/storage/union.pyx'),
+    ('aim._core.storage.arrayview', 'src/python/aimos/_core/storage/arrayview.py'),
+    ('aim._core.storage.treearrayview', 'src/python/aimos/_core/storage/treearrayview.py'),
+    ('aim._core.storage.treeview', 'src/python/aimos/_core/storage/treeview.py'),
+    ('aim._core.storage.utils', 'src/python/aimos/_core/storage/utils.py'),
+    ('aim._core.storage.container', 'src/python/aimos/_core/storage/container.py'),
+    ('aim._core.storage.containertreeview', 'src/python/aimos/_core/storage/containertreeview.py'),
+    ('aim._core.storage.inmemorytreeview', 'src/python/aimos/_core/storage/inmemorytreeview.py'),
+    ('aim._core.storage.prefixview', 'src/python/aimos/_core/storage/prefixview.py'),
 ]
 
 

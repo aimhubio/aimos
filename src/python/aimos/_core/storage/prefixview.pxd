@@ -2,9 +2,9 @@
 # cython: language_level = 3
 cimport cython
 
-from aim._core.storage.container cimport Container
-from aim._core.storage.container cimport ContainerItemsIterator
-from aim._core.storage.containertreeview cimport ContainerTreeView
+from aimos._core.storage.container cimport Container
+from aimos._core.storage.container cimport ContainerItemsIterator
+from aimos._core.storage.containertreeview cimport ContainerTreeView
 
 cdef class PrefixView(Container):
     cdef public bytes prefix

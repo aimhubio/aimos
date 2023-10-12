@@ -9,12 +9,12 @@ import aimrocks
 from typing import Iterator, Optional, Tuple
 
 from aimcore.cleanup import AutoClean
-from aim._core.storage.locking import SoftFileLock, NoopLock
-from aim._core.storage.types import BLOB
-from aim._core.storage.container import Container, ContainerKey, ContainerValue, ContainerItemsIterator
-from aim._core.storage.prefixview import PrefixView
-from aim._core.storage.containertreeview import ContainerTreeView
-from aim._core.storage.treeview import TreeView
+from aimos._core.storage.locking import SoftFileLock, NoopLock
+from aimos._core.storage.types import BLOB
+from aimos._core.storage.container import Container, ContainerKey, ContainerValue, ContainerItemsIterator
+from aimos._core.storage.prefixview import PrefixView
+from aimos._core.storage.containertreeview import ContainerTreeView
+from aimos._core.storage.treeview import TreeView
 
 
 logger = logging.getLogger(__name__)

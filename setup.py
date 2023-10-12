@@ -45,7 +45,7 @@ SETUP_REQUIRED = [
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    f'aim-ui=={__version__}',
+    f'aimos-ui=={__version__}',
     'aimrocks==0.5.1',
     'khash==0.5.0a5',
     'cachetools>=4.0.0',
@@ -129,23 +129,23 @@ COMPILE_ARGS = [
     '-fPIC'
 ]
 CYTHON_SCRITPS = [
-    ('aim._core.storage.hashing.c_hash', 'src/python/aimos/_core/storage/hashing/c_hash.pyx'),
-    ('aim._core.storage.hashing.hashing', 'src/python/aimos/_core/storage/hashing/hashing.py'),
-    ('aim._core.storage.hashing', 'src/python/aimos/_core/storage/hashing/__init__.py'),
-    ('aim._core.storage.encoding.encoding_native', 'src/python/aimos/_core/storage/encoding/encoding_native.pyx'),
-    ('aim._core.storage.encoding.encoding', 'src/python/aimos/_core/storage/encoding/encoding.pyx'),
-    ('aim._core.storage.encoding', 'src/python/aimos/_core/storage/encoding/__init__.py'),
-    ('aim._core.storage.treeutils', 'src/python/aimos/_core/storage/treeutils.pyx'),
-    ('aim._core.storage.rockscontainer', 'src/python/aimos/_core/storage/rockscontainer.pyx'),
-    ('aim._core.storage.union', 'src/python/aimos/_core/storage/union.pyx'),
-    ('aim._core.storage.arrayview', 'src/python/aimos/_core/storage/arrayview.py'),
-    ('aim._core.storage.treearrayview', 'src/python/aimos/_core/storage/treearrayview.py'),
-    ('aim._core.storage.treeview', 'src/python/aimos/_core/storage/treeview.py'),
-    ('aim._core.storage.utils', 'src/python/aimos/_core/storage/utils.py'),
-    ('aim._core.storage.container', 'src/python/aimos/_core/storage/container.py'),
-    ('aim._core.storage.containertreeview', 'src/python/aimos/_core/storage/containertreeview.py'),
-    ('aim._core.storage.inmemorytreeview', 'src/python/aimos/_core/storage/inmemorytreeview.py'),
-    ('aim._core.storage.prefixview', 'src/python/aimos/_core/storage/prefixview.py'),
+    ('aimos._core.storage.hashing.c_hash', 'src/python/aimos/_core/storage/hashing/c_hash.pyx'),
+    ('aimos._core.storage.hashing.hashing', 'src/python/aimos/_core/storage/hashing/hashing.py'),
+    ('aimos._core.storage.hashing', 'src/python/aimos/_core/storage/hashing/__init__.py'),
+    ('aimos._core.storage.encoding.encoding_native', 'src/python/aimos/_core/storage/encoding/encoding_native.pyx'),
+    ('aimos._core.storage.encoding.encoding', 'src/python/aimos/_core/storage/encoding/encoding.pyx'),
+    ('aimos._core.storage.encoding', 'src/python/aimos/_core/storage/encoding/__init__.py'),
+    ('aimos._core.storage.treeutils', 'src/python/aimos/_core/storage/treeutils.pyx'),
+    ('aimos._core.storage.rockscontainer', 'src/python/aimos/_core/storage/rockscontainer.pyx'),
+    ('aimos._core.storage.union', 'src/python/aimos/_core/storage/union.pyx'),
+    ('aimos._core.storage.arrayview', 'src/python/aimos/_core/storage/arrayview.py'),
+    ('aimos._core.storage.treearrayview', 'src/python/aimos/_core/storage/treearrayview.py'),
+    ('aimos._core.storage.treeview', 'src/python/aimos/_core/storage/treeview.py'),
+    ('aimos._core.storage.utils', 'src/python/aimos/_core/storage/utils.py'),
+    ('aimos._core.storage.container', 'src/python/aimos/_core/storage/container.py'),
+    ('aimos._core.storage.containertreeview', 'src/python/aimos/_core/storage/containertreeview.py'),
+    ('aimos._core.storage.inmemorytreeview', 'src/python/aimos/_core/storage/inmemorytreeview.py'),
+    ('aimos._core.storage.prefixview', 'src/python/aimos/_core/storage/prefixview.py'),
 ]
 
 
@@ -188,12 +188,12 @@ setup(
         find_packages(where='pkgs')
     ),
     package_dir={
-        'aim': 'src/python/aim',
+        'aimos': 'src/python/aimos',
         'aimcore': 'src/aimcore',
         'aimstack': 'pkgs/aimstack'
     },
     package_data={
-        'aim': notifier_files,
+        'aimos': notifier_files,
         'aimcore': aimcore_migration_files,
         'aimstack': []
     },
@@ -212,8 +212,7 @@ setup(
     ext_modules=cytonize_extensions(),
     entry_points={
         'console_scripts': [
-            'aim=aimcore.cli.cli:cli_entry_point',
-            'aim-watcher=aimcore.cli.watcher_cli:cli_entry_point',
+            'aimos=aimcore.cli.cli:cli_entry_point',
         ],
     },
     cmdclass={

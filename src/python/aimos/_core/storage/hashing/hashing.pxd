@@ -14,8 +14,8 @@ ctypedef long long int64
 
 import hashlib
 
-from aim._core.storage.encoding import encode_int64, decode_int64  # noqa
-from aim._core.storage.hashing cimport c_hash
+from aimos._core.storage.encoding import encode_int64, decode_int64  # noqa
+from aimos._core.storage.hashing cimport c_hash
 
 cdef int64 hash_none(object obj = *)
 cdef int64 hash_uniform(int64 bad_hash)

@@ -1,17 +1,17 @@
 from typing import Any, Iterator, Tuple, Union
 
-from aim._core.storage import encoding
-from aim._core.storage.encoding.encoding_native cimport decode_path
+from aimos._core.storage import encoding
+from aimos._core.storage.encoding.encoding_native cimport decode_path
 
-from aim._core.storage.types import AimObject, AimObjectPath
+from aimos._core.storage.types import AimObject, AimObjectPath
 
-from aim._core.storage.types import BLOB
-from aim._core.storage.utils import ArrayFlag, ObjectFlag, CustomObjectFlagType
+from aimos._core.storage.types import BLOB
+from aimos._core.storage.utils import ArrayFlag, ObjectFlag, CustomObjectFlagType
 
-from aim._core.storage.object import CustomObjectBase, CustomObject
-from aim._core.storage.treeview import TreeView
-from aim._core.storage.inmemorytreeview import InMemoryTreeView
-from aim._core.storage.treeutils_non_native import convert_to_native_object
+from aimos._core.storage.object import CustomObjectBase, CustomObject
+from aimos._core.storage.treeview import TreeView
+from aimos._core.storage.inmemorytreeview import InMemoryTreeView
+from aimos._core.storage.treeutils_non_native import convert_to_native_object
 
 
 def unfold_tree(

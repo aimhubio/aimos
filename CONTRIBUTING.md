@@ -66,11 +66,11 @@ pip install -e .
 
 Verify that Aim installed properly by running
 ```shell
-aim version
+aimos version
 ```
 or by importing aim in python REPL
 ```python
-import aim
+import aimos
 ```
 
 #### Style Guide

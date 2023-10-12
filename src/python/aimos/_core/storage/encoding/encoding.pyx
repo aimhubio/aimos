@@ -10,24 +10,24 @@ The encodings are implemented `(key, value)` design in mind, so using them to
 stream and store in chunks is easy to manage.
 """
 
-from aim._core.storage.encoding.encoding_native cimport PATH_SENTINEL_CODE
-from aim._core.storage.encoding.encoding_native cimport (
+from aimos._core.storage.encoding.encoding_native cimport PATH_SENTINEL_CODE
+from aimos._core.storage.encoding.encoding_native cimport (
     encode_int64,
     encode_double,
     encode_utf_8_str,
     encode_int64_big_endian,
 )
-from aim._core.storage.encoding.encoding_native cimport (
+from aimos._core.storage.encoding.encoding_native cimport (
     decode_int64,
     decode_double,
     decode_utf_8_str,
 )
-from aim._core.storage.encoding.encoding_native cimport decode_path  # noqa F401
-from aim._core.storage.utils import ArrayFlagType, ObjectFlagType, CustomObjectFlagType
-from aim._core.storage.utils import ArrayFlag, ObjectFlag
-from aim._core.storage.container import ContainerValue
-from aim._core.storage.types import AimObjectKey, AimObjectPath
-from aim._core.storage.types import BLOB
+from aimos._core.storage.encoding.encoding_native cimport decode_path  # noqa F401
+from aimos._core.storage.utils import ArrayFlagType, ObjectFlagType, CustomObjectFlagType
+from aimos._core.storage.utils import ArrayFlag, ObjectFlag
+from aimos._core.storage.container import ContainerValue
+from aimos._core.storage.types import AimObjectKey, AimObjectPath
+from aimos._core.storage.types import BLOB
 
 from typing import Union, Any
 

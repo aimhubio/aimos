@@ -7,10 +7,10 @@ import cachetools.func
 
 from pathlib import Path
 
-from aim._core.storage.encoding import encode_path
-from aim._core.storage.container import Container, ContainerItemsIterator
-from aim._core.storage.prefixview import PrefixView
-from aim._core.storage.rockscontainer import RocksContainer
+from aimos._core.storage.encoding import encode_path
+from aimos._core.storage.container import Container, ContainerItemsIterator
+from aimos._core.storage.prefixview import PrefixView
+from aimos._core.storage.rockscontainer import RocksContainer
 
 from typing import Dict, List, NamedTuple, Tuple
 

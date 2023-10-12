@@ -4,7 +4,7 @@
 # cython: cdivision=True
 # cython: nonecheck=False
 
-from aim._core.storage.encoding.encoding_native cimport *
+from aimos._core.storage.encoding.encoding_native cimport *
 
 
 cpdef inline bytes encode_int64_big_endian(int64 value):

@@ -5,23 +5,23 @@ Concepts
 Overview
 ========
 
-Aim is built around three main aspects, each focusing on different pillar of the
+AimOS is built around three main aspects, each focusing on different pillar of the
 logging and logs analysis process:
 
 - **Logging**: Log any type of data from any source.
-- **Observability**: Create your own UI pages, via Aim boards, explorers, and reports.
+- **Observability**: Create your own UI pages, via AimOS boards, explorers, and reports.
 - **Automations**(TODO): Automate processes, actions, and set up alerts on anything you have logged.
 
-Together, they form the foundation of the Aim operating system for logs, providing a powerful and flexible framework
+Together, they form the foundation of the AimOS operating system for logs, providing a powerful and flexible framework
 for building any kind of logging and visualization apps.
 
-**Aim fundamentally provides the building "Lego" blocks for building, distributing and running any kind of logging, observability and telemetry apps.**
+**AimOS fundamentally provides the building "Lego" blocks for building, distributing and running any kind of logging, observability and telemetry apps.**
 
 
 .. mermaid::
 
   mindmap
-    root((Aim))
+    root((AimOS))
       Observability
         Explorers
         Boards

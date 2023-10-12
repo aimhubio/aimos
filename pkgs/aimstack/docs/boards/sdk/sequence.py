@@ -44,7 +44,7 @@ ui.table({
     'required': [False, False],
     'default': ['""', 'None'],
     '': ['Query expression',
-         'Aim Repo object'],
+         'AimOS Repo object'],
 }, {'required': lambda val: ui.switch(checked=val, size='sm', disabled=True)})
 
 ########################################################################################################################
@@ -77,7 +77,7 @@ ui.table({
     'type': ['Any', 'int', 'kwargs'],
     'required': [True, False, False],
     'default': ['-', 'autoincrement', '{}'],
-    '': ['Value to be tracked. Must be Aim storage compatible value',
+    '': ['Value to be tracked. Must be AimOS storage compatible value',
          'Optional tracking step. If not specified, auto-incremented 0-based index.',
          'Additional axis values to be tracked.'],
 }, {'required': lambda val: ui.switch(checked=val, size='sm', disabled=True)})

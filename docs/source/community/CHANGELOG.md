@@ -4,15 +4,15 @@
 
 ### Enhancements
 
-- Revamp Aim UI (roubkar, KaroMourad, arsengit)
+- Revamp AimOS UI (roubkar, KaroMourad, arsengit)
     - Explorers
     - Apps
     - Reports
 - Add UI components Python SDK (roubkar)
-- Unify Aim Storage (mihran113)
-- Redesign Aim Tracking Server using websockets (mihran113)
-- Redesign Aim Python SDK (alberttorosyan)
-- Add ability to extend Aim via creating new apps, types and boards (alberttorosyan, roubkar)
+- Unify AimOS Storage (mihran113)
+- Redesign AimOS Tracking Server using websockets (mihran113)
+- Redesign AimOS Python SDK (alberttorosyan)
+- Add ability to extend AimOS via creating new apps, types and boards (alberttorosyan, roubkar)
 - Add the ability to track and visualize 3D figures (pabhermoso)
 - Add functionality for custom context in the PyTorch Ignite (tmynn)
 - Switch to patched version of official pynvml (mihran113)

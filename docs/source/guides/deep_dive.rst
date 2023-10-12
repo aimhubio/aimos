@@ -1,15 +1,15 @@
 #############
-Aim Deep Dive
+AimOS Deep Dive
 #############
 
 Overview
 ========
-With Aim you can build end-to-end observability layer for your AI Systems.
+With AimOS you can build end-to-end observability layer for your AI Systems.
 
-This is an introduction to the main Aim concepts and how they enable Aim.
+This is an introduction to the main AimOS concepts and how they enable AimOS.
 
 .. image:: https://docs-blobs.s3.us-east-2.amazonaws.com/v4-images/guides/aimstack-overview.png
-    :alt: Aim Stack Overview
+    :alt: AimOS Stack Overview
     :align: center
 
 .. toctree::

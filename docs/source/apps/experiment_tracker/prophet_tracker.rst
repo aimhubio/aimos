@@ -5,8 +5,8 @@ Prophet
 
 `AimCallback` for `Prophet` is designed to enhance your experiment logging and monitoring. It thoroughly records essential information, including hyperparameters, training, validation, and test time metrics like loss and accuracy. Moreover, it offers comprehensive system usage tracking, keeping an eye on CPU and GPU memory utilization.
 
-Aim provides an AimLogger object designed to track `Prophet <https://facebook.github.io/prophet/docs/quick_start.html>`_ hyperparameters and metrics.
-It takes three steps to integrate Aim into your Prophet script.
+AimOS provides an AimLogger object designed to track `Prophet <https://facebook.github.io/prophet/docs/quick_start.html>`_ hyperparameters and metrics.
+It takes three steps to integrate AimOS into your Prophet script.
 
 Step 1: Explicitly import the `AimLogger`.
 
@@ -35,5 +35,5 @@ Note that the metrics are assumed to be validation metrics by default. Alternati
     metrics = {"train_mse": backtest_mse, "train_mape": backtest_mape}
     logger.track_metrics(metrics, context={"subset": "train"})
 
-See `AimLogger` source `here <https://github.com/aimhubio/aim/blob/main/pkgs/aimstack/prophet_tracker/callbacks/base_callback.py>`_.
-Check out a simple example `here <https://github.com/aimhubio/aim/blob/main/examples/prophet_track.py>`_.
+See `AimLogger` source `here <https://github.com/aimhubio/aimos/blob/main/pkgs/aimstack/prophet_tracker/callbacks/base_callback.py>`_.
+Check out a simple example `here <https://github.com/aimhubio/aimos/blob/main/examples/prophet_track.py>`_.

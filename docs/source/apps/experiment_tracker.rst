@@ -118,7 +118,7 @@ Integrating to existing code
 ============================
 AimOS Experiment Tracker is integrated with all the major ML frameworks via the Integration Apps.
 
-If you are already using one of the supported frameworks, you can start using Aim right away.
+If you are already using one of the supported frameworks, you can start using AimOS right away.
 
 Example: HuggingFace integration
 --------------------------------

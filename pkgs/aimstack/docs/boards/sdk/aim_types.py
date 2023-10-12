@@ -1,12 +1,12 @@
-ui.header('Using Aim SDK Type System')
+ui.header('Using AimOS SDK Type System')
 
 ui.html("""
-    Aim Python SDK provides core building blocks for creating applications which track and visualize metadata.
-    Though these core classes are sufficient enough, Aim provides capabilities to exnted it's type system and build
+    AimOS Python SDK provides core building blocks for creating applications which track and visualize metadata.
+    Though these core classes are sufficient enough, AimOS provides capabilities to exnted it's type system and build
     applications in more convenient manner. 
 """)
 ui.html("""
-    Below are some use-cases of extending Aim core classes.
+    Below are some use-cases of extending AimOS core classes.
 """)
 
 ########################################################################################################################
@@ -62,10 +62,10 @@ ui.html("""
 ########################################################################################################################
 ui.subheader('Example 2: Restricting object types allowed to track on a Sequence')
 ui.html("""
-    The following example demonstrates how to leverage the Aim Sequence generic type to fix the tracked items type and
+    The following example demonstrates how to leverage the AimOS Sequence generic type to fix the tracked items type and
     enable extra functionality which is applicable to limited set of values.
     Lets assume we want to define class Metric, which is a sequence of numeric values, and has an additional interface
-    to calculate the mean of the tracked values. The base Sequence class allows to track any Aim storage compatible type.
+    to calculate the mean of the tracked values. The base Sequence class allows to track any AimOS storage compatible type.
     However, mean value cannot be calculated for such heterogeneous sequences, hence, we need to extend the Sequence class.
 """)
 

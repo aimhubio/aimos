@@ -5,13 +5,12 @@ Quick start
 Start in 3 steps
 =================
 
-1. Install Aim
-
+1. Install AimOS
 .. code-block:: console
   
-    pip install aim
+    pip install aimos
 
-2. Initialize Aim in your project
+2. Initialize AimOS in your project
 
 .. code-block:: python
 
@@ -31,22 +30,22 @@ Start in 3 steps
   for i in range(1000):
         metric.track(i, epoch=1)
 
-3. Run Aim Server
+3. Run AimOS Server
 
 .. code-block:: console
   
-  aim server
+  aimos server
 
-4. Run Aim UI
+4. Run AimOS UI
 
 .. code-block:: console
   
-  aim ui
+  aimos ui
 
-Log your first project with Aim
+Log your first project with AimOS
 ===============================
 
-Aim saves the logs into a `Repo`. Repo is a collection of `Container` objects.
+AimOS saves the logs into a `Repo`. Repo is a collection of `Container` objects.
 ML training `Run` is kind of a `Container`. 
 
 Container is a set of `Sequence` objects interconnected by config dictionaries.
@@ -57,9 +56,9 @@ Container is a set of `Sequence` objects interconnected by config dictionaries.
 
 Hyperparameters and environment variables are examples of a config dictionary.
 
-Default Aim installation includes the `aimstack.base` app which contains all the primitives for logging.
+Default AimOS installation includes the `aimstack.base` app which contains all the primitives for logging.
 
-Here is how to add Aim to your project and start logging straight away.
+Here is how to add AimOS to your project and start logging straight away.
 
 Logger configuration
 --------------------
@@ -72,7 +71,7 @@ In this example, we use the default Run.
   # Create a run
   aim_run = Run(repo='/path/to/repo/.aim')
 
-It's also possible to run Aim remotely, in that case the repo will be the destination of the remote aim deployment.
+It's also possible to run AimOS remotely, in that case the repo will be the destination of the remote aimos deployment.
 
 Configure and log the run
 -------------------------
@@ -95,14 +94,14 @@ Once Run is initialized, you can configure it with parameters and log the run.
   my_metric.track(0.0004)
 
 You can create as many metrics and other sequences as your project requires.
-Fundamentally Aim provides all the tools to log everything from everywhere.
+Fundamentally AimOS provides all the tools to log everything from everywhere.
 
 Integration with ML frameworks
 ==============================
 
-The Aim experiment tracker app is well-integrated with major ML frameworks and libraries.
+The AimOS experiment tracker app is well-integrated with major ML frameworks and libraries.
 
-Those integrations are apps and are part of default Aim installation.
+Those integrations are apps and are part of default AimOS installation.
 
 .. code-block:: python
 
@@ -120,8 +119,7 @@ Step 1. Create AimLogger object
 
 .. code-block::  python
 
-  # track experimental data by using Aim
-  aim_logger = AimLogger(
+  # track experimental data by using AimOS   aim_logger = AimLogger(
       experiment='aim_on_pt_lightning',
       train_metric_prefix='train_',
       val_metric_prefix='val_',
@@ -131,5 +129,5 @@ Step 2. Pass the aim_logger object as the logger argument
 
 .. code-block:: python
 
-  # track experimental data by using Aim
+  # track experimental data by using AimOS
   trainer = Trainer(gpus=1, progress_bar_refresh_rate=20, max_epochs=5, logger=aim_logger)

@@ -1,31 +1,31 @@
 ui.header('Python SDK Overview')
 
 ui.html("""
-    Aim provides a powerful SDK for metadata management.
+    AimOS provides a powerful SDK for metadata management.
     It allows users to define their own metadata types, via extensible type system.
-    Additionally, Aim Python SDK provides capabilities of writing and reading data to Aim storage, 
+    Additionally, AimOS Python SDK provides capabilities of writing and reading data to AimOS storage, 
     and enables pythonic query expressions for data exploration.
 """)
 
 ui.subheader('Main Concepts')
 
 ui.html("""
-    Aim Python SDK is centered around three main concepts, all of them describing a piece of metadata. 
+    AimOS Python SDK is centered around three main concepts, all of them describing a piece of metadata. 
     These concepts are <b>Object</b>, <b>Sequence</b> and <b>Container</b>.
     
     The <b>Object</b> represents an atomic single piece of metadata. It describes properties of metadata as well as 
     additional behavior (methods) applicable to it. 
-    Examples of an Aim Object are: </b>Image</b>, </b>Distribution</b>, </b>Audio</b>.
+    Examples of an AimOS Object are: </b>Image</b>, </b>Distribution</b>, </b>Audio</b>.
     Each of these concrete object types describes what properties it has (f.e. </b>Image</b> has description, 
-    format and data fields) which are serialized in Aim storage.
+    format and data fields) which are serialized in AimOS storage.
 
-    <b>Sequence</b> is a collection of Objects representing lineage or change over the time. Examples of Aim 
+    <b>Sequence</b> is a collection of Objects representing lineage or change over the time. Examples of AimOS 
     Sequence are Metric (sequence of numeric elements), ImageSequence, etc. Sequence provides ability 
     to read and sample the data within the given range. Sequence types might be extended to provide an 
     additional functionality, other data types adapters, etc. For example, Metric sequence provides 
     interface to dump it as a pandas DataFrame object.
 
-    <b>Container</b> is a collection of interrelated Aim Objects and Sequences. It usually represents a set of 
+    <b>Container</b> is a collection of interrelated AimOS Objects and Sequences. It usually represents a set of 
     metadata and artifacts generated during a process, for example model training. Container provides 
     ability to create and browse object Sequences and set it's own parameters and attributes for future reference.
 """)
@@ -33,20 +33,20 @@ ui.html("""
 ui.subheader('Working with metadata')
 
 ui.html("""
-    Now lets take a look how the above mentioned concepts are modeled and understand the basic usage of Aim Python SDK.
-    Aim uses remote server based writes, which means that data access and tracking should be done in specific manner.
+    Now lets take a look how the above mentioned concepts are modeled and understand the basic usage of AimOS Python SDK.
+    AimOS uses remote server based writes, which means that data access and tracking should be done in specific manner.
     Examples, of data access and tracking can be find below.
 """)
 
 ui.html("""
-    Aim Python SDK provides 3 base classes; Object, Sequence and Container, each representing respective core concept.
+    AimOS Python SDK provides 3 base classes; Object, Sequence and Container, each representing respective core concept.
     Additionally the <b>Repo</b> class represents a single project repository, where all the collected data resides.
     These four classes provide a complete system for storing and querying metadata, as well as extending already defined
-    types. Below are examples of using Aim Python SDK to write and query data:
+    types. Below are examples of using AimOS Python SDK to write and query data:
 """)
 
 ui.html("""
-    <b>Tracking metadata with Aim SDK</b>
+    <b>Tracking metadata with AimOS SDK</b>
 """)
 
 ui.code("""
@@ -114,7 +114,7 @@ ui.html("""
 """)
 
 ui.html("""
-    Aim Python SDK provides a convenient way to query sequences and containers based on their type. This can be done
+    AimOS Python SDK provides a convenient way to query sequences and containers based on their type. This can be done
     either by specifying the object type as argument or by using filter() classmethod:
 """)
 
@@ -133,12 +133,12 @@ Metric.filter('sequence.name == "loss"').all()
 """)
 
 ui.html("""
-    More examples on how to use Aim SDK type system can be found below:
+    More examples on how to use AimOS SDK type system can be found below:
 """)
-ui.board_link('sdk/aim_types.py', 'Using Aim SDK Type System')
+ui.board_link('sdk/aim_types.py', 'Using AimOS SDK Type System')
 
 ui.html("""
-    The following sections explore Aim core classes interface in depth:
+    The following sections explore AimOS core classes interface in depth:
 """)
 
 ui.board_link('sdk/container.py', 'Container API reference')

@@ -33,7 +33,7 @@ ui.table({
     'required': [False, False, False],
     'default': ['None', 'None', 'ContainerOpenMode.WRITE'],
     '': ['Container unique hash. If not specified, auto-generated.',
-         'Aim repo path or Repo object',
+         'AimOS repo path or Repo object',
          'Container open mode. WRITE by default.'],
 }, {'required': lambda val: ui.switch(checked=val, size='sm', disabled=True)})
 
@@ -51,7 +51,7 @@ ui.table({
     'required': [False, False],
     'default': ['""', 'None'],
     '': ['Query expression',
-         'Aim Repo object'],
+         'AimOS Repo object'],
 }, {'required': lambda val: ui.switch(checked=val, size='sm', disabled=True)})
 
 ########################################################################################################################

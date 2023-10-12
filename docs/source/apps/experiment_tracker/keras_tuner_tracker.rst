@@ -20,5 +20,5 @@ In KerasTuner, we call the `search()` method of the tuner object to perform a se
         callbacks=[AimCallback(tuner=tuner, experiment="test_experiment")],
     )
 
-See `AimCallback` source `here <https://github.com/aimhubio/aim/blob/main/pkgs/aimstack/keras_tuner_tracker/callbacks/base_callback.py>`_.
-Check out a simple example `here <https://github.com/aimhubio/aim/blob/main/examples/keras_tuner_track.py>`_.
+See `AimCallback` source `here <https://github.com/aimhubio/aimos/blob/main/pkgs/aimstack/keras_tuner_tracker/callbacks/base_callback.py>`_.
+Check out a simple example `here <https://github.com/aimhubio/aimos/blob/main/examples/keras_tuner_track.py>`_.

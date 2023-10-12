@@ -1,10 +1,10 @@
 ####################
-Use Aim on Notebooks
+Use AimOS on Notebooks
 ####################
 
-Set up Aim on Jupyter Notebooks
+Set up AimOS on Jupyter Notebooks
 ===============================
 
 
-Set up Aim on Sagemaker Notebooks
+Set up AimOS on Sagemaker Notebooks
 =================================

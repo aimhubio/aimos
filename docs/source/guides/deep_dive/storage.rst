@@ -4,24 +4,24 @@ Storage
 
 About
 =====
-Aim is built around its super-performant logs storage.
+AimOS is built around its super-performant logs storage.
 
-The Aim storage is a schemaless storage built on top of RocksDB.
+The AimOS storage is a schemaless storage built on top of RocksDB.
 It allows to store large quantities of sequential data of any kind of records - organized through containers.
 
-There are two main requirements at the basis of building the Aim storage:
+There are two main requirements at the basis of building the AimOS storage:
 
 - Ability to handle lots of consecutive, non-blocking writes
 - Ability to retrieve the logs at the levels of containers, sequences and records.
 
 Internals
 =========
-Aim storage is built like a one large JSON organized via Containers, Sequences and Records.
+AimOS storage is built like a one large JSON organized via Containers, Sequences and Records.
 When writing to the storage, the data is serialized and saved into its respective subtree.
 
 
 .. image:: https://docs-blobs.s3.us-east-2.amazonaws.com/v4-images/guides/aim-storage-diagram.png
-    :alt: Aim storage diagram
+    :alt: AimOS storage diagram
     :align: center
     :width: 100%
 
@@ -33,8 +33,8 @@ We call this feature laziness in read and write. It's enabled by the way the con
 
 Record serialization
 --------------------
-Aim storage introduces a python-compatible serialization mechanism. 
-This means that Aim serializes python objects (Records) into the storage and stores sequences of them. 
+AimOS storage introduces a python-compatible serialization mechanism.
+This means that AimOS serializes python objects (Records) into the storage and stores sequences of them.
 
 This feature is the key to the storage's ability to store any logs of Records users can specify via Python objects.
 
@@ -45,7 +45,7 @@ This is key especially when dealing with long sequences and large blogs of data 
 
 Query language
 ==============
-At the lowest level, the Aim storage is equipped with a pythonic query language. This means that you can query all your sequences and containers by their properties via a pythonic if statement over them.
+At the lowest level, the AimOS storage is equipped with a pythonic query language. This means that you can query all your sequences and containers by their properties via a pythonic if statement over them.
 
 Security considerations
 -----------------------

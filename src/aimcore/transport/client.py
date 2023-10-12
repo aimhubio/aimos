@@ -101,8 +101,8 @@ class Client:
         remote_version = self.get_version()
 
         # server doesn't yet have the `get_version()` method implemented
-        if remote_version == '<4.0.0':
-            RuntimeError(error_message_template.format(remote_version, client_version))
+        # if remote_version == '<4.0.0':
+        #    RuntimeError(error_message_template.format(remote_version, client_version))
 
         # compare versions
         if client_version == remote_version:

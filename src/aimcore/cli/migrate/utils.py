@@ -37,21 +37,21 @@ SEQUENCE_TYPE_MAP = {
     'float': Run.get_metric,
     'int': Run.get_metric,
     'number': Run.get_metric,
-    'aim.image': Run.get_image_sequence,
-    'list(aim.image)': Run.get_image_sequence,
-    'aim.audio': Run.get_audio_sequence,
-    'list(aim.audio)': Run.get_audio_sequence,
-    'aim.text': Run.get_text_sequence,
-    'list(aim.text)': Run.get_text_sequence,
-    'aim.distribution': Run.get_distribution_sequence,
-    'aim.figure': Run.get_figure_sequence,
+    'aimos.image': Run.get_image_sequence,
+    'list(aimos.image)': Run.get_image_sequence,
+    'aimos.audio': Run.get_audio_sequence,
+    'list(aimos.audio)': Run.get_audio_sequence,
+    'aimos.text': Run.get_text_sequence,
+    'list(aimos.text)': Run.get_text_sequence,
+    'aimos.distribution': Run.get_distribution_sequence,
+    'aimos.figure': Run.get_figure_sequence,
 }
 
 
 def migrate_v1_sequence_data(run: Run, trace_tree: TreeView, length: int, item_type: str, name: str, context: Dict):
     if name.startswith('__system'):
         seq = run.sequences.typed_sequence(SystemMetric, name, context)
-    elif item_type == 'aim.log_line':
+    elif item_type == 'aimos.log_line':
         seq = run.logs
     else:
         get_seq_method = SEQUENCE_TYPE_MAP.get(item_type)

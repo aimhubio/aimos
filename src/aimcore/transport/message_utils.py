@@ -81,9 +81,9 @@ class UnauthorizedRequestError(RuntimeError):
         self.handler = handler
 
 
-@CustomObject.alias('aim.resource')
+@CustomObject.alias('aimos.resource')
 class ResourceObject(CustomObject):
-    AIM_NAME = 'aim.resource'
+    AIM_NAME = 'aimos.resource'
 
     def __init__(self, handler):
         self.storage['handler'] = handler

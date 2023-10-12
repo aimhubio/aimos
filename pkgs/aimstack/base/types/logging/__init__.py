@@ -9,13 +9,13 @@ from aimos import Record
 from aimstack.base.types.text import Text
 
 
-@Record.alias('aim.log_line')
+@Record.alias('aimos.log_line')
 class LogLine(Text):
     AIM_NAME = 'base.LogLine'
     SEQUENCE_NAME = 'LogStream'
 
 
-@Record.alias('aim.log_record')
+@Record.alias('aimos.log_record')
 class LogRecord(Record):
     AIM_NAME = 'base.LogRecord'
     SEQUENCE_NAME = 'LogRecordSequence'

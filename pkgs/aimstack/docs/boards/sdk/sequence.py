@@ -1,7 +1,7 @@
 ui.header('Sequence API reference')
 
 ui.html("""
-    Class <b>aim.Sequence</b> provides an interface for tracking objects and retrieving sequence data.
+    Class <b>aimos.Sequence</b> provides an interface for tracking objects and retrieving sequence data.
     It enables convenient API for slicing and sampling the sequence in any given range, as well as ability
     to specify additional axis data.
 """)

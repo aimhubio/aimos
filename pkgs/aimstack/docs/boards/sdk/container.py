@@ -1,7 +1,7 @@
 ui.header('Container API reference')
 
 ui.html("""
-    Class <b>aim.Container</b> is a base building block for organizing metadata into the set of 
+    Class <b>aimos.Container</b> is a base building block for organizing metadata into the set of 
     interrelated objects and sequences. It provides the following capabilities:
     <ul>
         <li> Set/get Container attributes

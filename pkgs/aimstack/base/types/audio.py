@@ -11,7 +11,7 @@ from .io import wavfile
 logger = logging.getLogger(__name__)
 
 
-@Record.alias('aim.audio')
+@Record.alias('aimos.audio')
 class Audio(Record):
     """Audio object used to store audio objects in Aim repository..
 

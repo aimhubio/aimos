@@ -93,7 +93,7 @@ def server(host, port,
         import aimos
         import aimcore
 
-        reload_dirs = [os.path.dirname(aim.__file__), os.path.dirname(aimcore.__file__), dev_package_dir]
+        reload_dirs = [os.path.dirname(aimos.__file__), os.path.dirname(aimcore.__file__), dev_package_dir]
     else:
         reload_dirs = []
 

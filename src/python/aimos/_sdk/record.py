@@ -7,9 +7,9 @@ from aimos._core.storage.object import CustomObject as AimStorageObject
 from aimos._sdk.blob import BLOB
 
 
-@AimStorageObject.alias('aim.Record')
+@AimStorageObject.alias('aimos.Record')
 class Record(AimStorageObject):
-    AIM_NAME = 'aim.Record'
+    AIM_NAME = 'aimos.Record'
     RESOLVE_BLOBS = False
 
     def __init_subclass__(cls, **kwargs):

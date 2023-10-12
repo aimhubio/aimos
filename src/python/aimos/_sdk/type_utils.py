@@ -26,20 +26,20 @@ if TYPE_CHECKING:
 
 def get_typename(type_: Type, inner_type: Optional[Type] = None) -> str:
     if issubclass(type_, int):
-        return f'{Record.get_typename()}->aim.Number->aim.Int'
+        return f'{Record.get_typename()}->aimos.Number->aimos.Int'
     if issubclass(type_, float):
-        return f'{Record.get_typename()}->aim.Number->aim.Float'
+        return f'{Record.get_typename()}->aimos.Number->aimos.Float'
     if issubclass(type_, numbers.Number):
-        return f'{Record.get_typename()}->aim.Number'
+        return f'{Record.get_typename()}->aimos.Number'
     if issubclass(type_, str):
-        return f'{Record.get_typename()}->aim.String'
+        return f'{Record.get_typename()}->aimos.String'
     if issubclass(type_, Record):
         return type_.get_full_typename()
     if issubclass(type_, list):
         if inner_type:
-            return f'{Record.get_typename()}->aim.List[{get_typename(inner_type)}]'
+            return f'{Record.get_typename()}->aimos.List[{get_typename(inner_type)}]'
         else:
-            return f'{Record.get_typename()}->aim.List[]'
+            return f'{Record.get_typename()}->aimos.List[]'
     return ''
 
 

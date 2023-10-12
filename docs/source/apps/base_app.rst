@@ -6,20 +6,20 @@ About
 =====
 Base App provides the logging primitives and the UI for logs browsing. 
 
-The Base App UI provides the views for all primitive types as well as views for any other custom record type that is logged with Aim.
+The Base App UI provides the views for all primitive types as well as views for any other custom record type that is logged with AimOS.
 
 .. image:: https://docs-blobs.s3.us-east-2.amazonaws.com/v4-images/guides/aim-logs-overview.png
     :width: 100%
-    :alt: Aim Logs Overview
+    :alt: AimOS Logs Overview
 
 Installation
 ------------
-Installed out of the box with as part of default Aim installation.
+Installed out of the box with as part of default AimOS installation.
 Users can unregister and replace with any other app.
 
 Usage
 =====
-The Base app is default installed with Aim. It can be accessed via 
+The Base app is default installed with AimOS. It can be accessed via
 
 .. code-block:: python
   

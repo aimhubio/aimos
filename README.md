@@ -33,11 +33,11 @@
   [![Medium](https://img.shields.io/badge/Medium-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/aimstack)
   
   [![Platform Support](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-blue)]()
-  [![PyPI - Python Version](https://img.shields.io/badge/python-%3E%3D%203.7-blue)](https://pypi.org/project/aim/)
-  [![PyPI Package](https://img.shields.io/pypi/v/aim?color=yellow)](https://pypi.org/project/aim/)
+  [![PyPI - Python Version](https://img.shields.io/badge/python-%3E%3D%203.7-blue)](https://pypi.org/project/aimos/)
+  [![PyPI Package](https://img.shields.io/pypi/v/aim?color=yellow)](https://pypi.org/project/aimos/)
   [![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)
-  [![PyPI Downloads](https://img.shields.io/pypi/dw/aim?color=green)](https://pypi.org/project/aim/)
-  [![Issues](https://img.shields.io/github/issues/aimhubio/aim)](http://github.com/aimhubio/aim/issues)
+  [![PyPI Downloads](https://img.shields.io/pypi/dw/aim?color=green)](https://pypi.org/project/aimos/)
+  [![Issues](https://img.shields.io/github/issues/aimhubio/aim)](http://github.com/aimhubio/aimos/issues)
   
 </div>
 

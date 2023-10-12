@@ -2,17 +2,17 @@
 Overview
 ########
 
-What are Aim apps?
+What are AimOS apps?
 ==================
 As part of building software and products we use a number of logging applications such as tensorboard, weights and biases, kibana, grafana, arize etc.
 Each one of these are logging applications - they enable a mechanism to log data, observe it and (if available) automate around it.
 
-Aim is an operating system for logs. 
+AimOS is an operating system for logs.
 
-Aim logging apps are python packages that combine logging, observability and automations all-in-one.
+AimOS logging apps are python packages that combine logging, observability and automations all-in-one.
 
 .. image:: https://docs-blobs.s3.us-east-2.amazonaws.com/v4-images/apps/aim-app-structure.png
-   :alt: Aim app structure
+   :alt: AimOS app structure
    :width: 500px
    :align: center
 
@@ -34,18 +34,18 @@ Logging AI Metadata, observing it end-to-end is key to fundamental problems such
 - Debugging
 - Full attribution and safety
 
-Aim enables building apps for all of these use-cases.
-With the ability generically log everything in the AI System, Aim apps can encompass the UI and automations required to satisfy these use-cases sustainably without vendor lockin through community and ecosystem effort.
+AimOS enables building apps for all of these use-cases.
+With the ability generically log everything in the AI System, AimOS apps can encompass the UI and automations required to satisfy these use-cases sustainably without vendor lockin through community and ecosystem effort.
 
-Out-of-the-box Aim apps
+Out-of-the-box AimOS apps
 ================
 
 ML Experiment Tracking
 ====================================
-The ML Experiment Tracking Integrations are default available with Aim. 
+The ML Experiment Tracking Integrations are default available with AimOS.
 These are a set of experiment tracker specific integrations that connect to the respective fraeworks and their trainers.
 
-It takes one line to add these loggers to your training script and start logging your experiments to Aim.
+It takes one line to add these loggers to your training script and start logging your experiments to AimOS.
 
 It's plug and go. No need to change your training script or your workflow.
 
@@ -67,7 +67,7 @@ It's plug and go. No need to change your training script or your workflow.
 
 AI Systems Tracking
 ====================================
-The AI Systems Tracking apps are available in Aim by default.
+The AI Systems Tracking apps are available in AimOS by default.
 It consists of a set of trackers that log AI systems executions and enable out-of-the-box observability.
 These apps seamlessly integrate with your existing AI pipelines.
 

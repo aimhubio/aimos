@@ -4,13 +4,13 @@ Experiment Tracker
 
 About
 =====
-The Aim Experiment Tracker app helps to track and manage ML experiments.
+The AimOS Experiment Tracker app helps to track and manage ML experiments.
 
 For most ML frameworks, we have extended the experiment tracker app and created an app per integration.
 
 Each app provides the views for the experiments specifically tracked by that framework.
 
-Together, these apps provide acomplete ML experiment tracking and 
+Together, these apps provide a complete ML experiment tracking and
 management experience for wide variety of type of data - from metrics to text to audio.
 
 The Experiment Tracker app also provides the base experiment tracking and management abstractions - the users can extend them to their preferences.
@@ -41,12 +41,12 @@ All relevant ML framework integrations are provided out of the box.
 
 Installation
 ------------
-Installed out of the box with as part of default Aim installation.
+Installed out of the box with as part of default AimOS installation.
 Users can unregister and replace with any other app.
 
 Usage
 =====
-The Aim default experiment tracker app usage is straightforward. 
+The AimOS default experiment tracker app usage is straightforward.
 Users just need to integrate the Run and the 
 
 Integrate with code
@@ -75,11 +75,11 @@ The Experiment Tracker can be added to the code like this:
 Start the UI
 ------------
 Once the code is run, the UI is very straightforward to start. 
-With the default Aim installation, just run:
+With the default AimOS installation, just run:
 
 .. code-block:: bash
 
-  aim ui
+  aimos ui
 
 The UI will be available at http://0.0.0.0:43800
 
@@ -92,11 +92,11 @@ The Experiment Tracking UI has three main sections:
 - **Single Run page:** a detailed view of a single training run
 - **Runs page:** a searchable list of all runs
 
-These views together with the Aim explorers provide a complete experiment tracking and management solution.
+These views together with the AimOS explorers provide a complete experiment tracking and management solution.
 
 Using Explorers with Experiment Tracking
 ----------------------------------------
-Aim Explorers are specialized in comparing large quantities of logs of the same type.
+AimOS Explorers are specialized in comparing large quantities of logs of the same type.
 
 There are wide variety of explorers available out of the box - from metrics to text to audio.
 
@@ -104,19 +104,19 @@ The Experiment Tracker app provides the base experiment management while the Exp
 
 .. image:: https://docs-blobs.s3.us-east-2.amazonaws.com/v4-images/guides/experiment-tracker-screenshot.png
   :width: 100%
-  :alt: Aim Experiment Tracker
+  :alt: AimOS Experiment Tracker
 
 
 Using Reports with Experiment Tracking
 --------------------------------------
-Aim also has Reports available that are highly integrated with all the rest of the pages.
+AimOS also has Reports available that are highly integrated with all the rest of the pages.
 Any logged data can be rendered in the Reports. 
 
 Reports are a knowledge-base on top of the logs. They are a great way to share knowledge and insights with the team.
 
 Integrating to existing code
 ============================
-Aim Experiment Tracker is integrated with all the major ML frameworks via the Integration Apps.
+AimOS Experiment Tracker is integrated with all the major ML frameworks via the Integration Apps.
 
 If you are already using one of the supported frameworks, you can start using Aim right away.
 

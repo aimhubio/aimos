@@ -1,5 +1,5 @@
 ###############
- Welcome to Aim
+ Welcome to AimOS
 ###############
 
 .. raw:: html
@@ -29,35 +29,35 @@
   :alt: Platform Support
 
 .. image:: https://img.shields.io/badge/python-%3E%3D%203.7-blue
-  :target: https://pypi.org/project/aim/
+  :target: https://pypi.org/project/aimos/
   :alt: PyPI - Python Version
 
 .. image:: https://img.shields.io/badge/License-Apache%202.0-orange.svg
   :target: https://opensource.org/licenses/Apache-2.0
   :alt: License
 
-.. image:: https://img.shields.io/pypi/dw/aim?color=green
-  :target: https://pypi.org/project/aim/
+.. image:: https://img.shields.io/pypi/dw/aimos?color=green
+  :target: https://pypi.org/project/aimos/
   :alt: PyPI Downloads
 
-.. image:: https://img.shields.io/github/issues/aimhubio/aim
-  :target: http://github.com/aimhubio/aim/issues
+.. image:: https://img.shields.io/github/issues/aimhubio/aimos
+  :target: http://github.com/aimhubio/aimos/issues
   :alt: Issues
 
 |
 
-Aim is an operating system for logs.
-Aim comes installed with a set of default apps that provide a seamless experience for:
+AimOS is an operating system for logs.
+AimOS comes installed with a set of default apps that provide a seamless experience for:
 
 - Logs browsing
 - Experiment tracking
 - AI Systems tracing
 
-It's super easy to start with Aim and use it. Aim has out-of-the-box seamless integrattions with major AI frameworks.
-Default Aim apps can be used out of the box with no configuration required.
+It's super easy to start with AimOS and use it. AimOS has out-of-the-box seamless integrations with major AI frameworks.
+Default AimOS apps can be used out of the box with no configuration required.
 
-With Aim developers can build, run and share any kind of logging apps.
-Aim can get really powerful as you build your own logging apps.
+With AimOS developers can build, run and share any kind of logging apps.
+AimOS can get really powerful as you build your own logging apps.
 
 .. toctree::
   :maxdepth: 2
@@ -113,8 +113,7 @@ Aim can get really powerful as you build your own logging apps.
   ./community/CHANGELOG.md
   ./community/CONTRIBUTING.md
   ./community/CODE_OF_CONDUCT.md
-  Aim repo <https://github.com/aimhubio/aim>
-  AimStack repo <https://github.com/aimhubio/aimstack>
+  AimOS repo <https://github.com/aimhubio/aimos>
   Discord <https://community.aimstack.io>
   X <https://x.com/aimstackio>
   Blog <https://aimstack.io/blog>

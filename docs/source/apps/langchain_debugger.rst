@@ -4,7 +4,7 @@ LangChain Debugger
 
 LangChain enables building applications with LLMs through composability.
 
-LangChain Debugger is an Aim app that enables to tracks LangChain executions, including:
+LangChain Debugger is an AimOS app that enables to tracks LangChain executions, including:
 
 - prompts and generations of LLMs
 - inputs and outputs of tools

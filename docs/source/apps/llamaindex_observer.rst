@@ -6,14 +6,14 @@ LlamaIndex is a query engine tailored to answer questions over your data.
 
 LlamaIndex Observer package will log events during LlamaIndex executions, such as LLMs inputs and outputs, templating context and variables, etc.
 
-Import the Aim LlamaIndex callback handler:
+Import the AimOS LlamaIndex callback handler:
 
 .. code-block:: python
 
    from aimstack.llamaindex_observer.callback_handlers import GenericCallbackHandler
 
 
-Initialize the Aim Callback handler
+Initialize the AimOS Callback handler
 
 .. code-block:: python
 

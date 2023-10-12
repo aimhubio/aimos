@@ -5,7 +5,7 @@
 .. raw:: html
   
   <div align="center">
-    <img src="https://user-images.githubusercontent.com/13848158/154338760-edfe1885-06f3-4e02-87fe-4b13a403516b.png">
+    <img src="https://github.com/aimhubio/aimos/assets/13848158/723acdfc-5f35-42ff-88c2-9d506b885f15">
     <h3>Open-source modular observability for AI Systems</h3>
     <br/> 
     Easily log, connect and observe any parts of your AI Systems from experiments to production to prompts to ai system monitoring

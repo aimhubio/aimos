@@ -47,7 +47,7 @@ SETUP_REQUIRED = [
 REQUIRED = [
     f'aimos-ui=={__version__}',
     'aimrocks==0.5.1',
-    'khash==0.5.0a5',
+    'khash==0.6.0dev1000',
     'cachetools>=4.0.0',
     'click>=7.0',
     'cryptography>=3.0',

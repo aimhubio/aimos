@@ -1,4 +1,4 @@
-.. |Aim| replace:: Aim
+.. |AimOS| replace:: AimOS
 .. |Objects| replace:: :term:`Objects<Object>`
 .. |Object| replace:: :term:`Object<Object>`
 .. |Sequences| replace:: :term:`Sequences<Sequence>`

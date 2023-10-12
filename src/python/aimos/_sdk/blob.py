@@ -1,0 +1,1 @@
+from aimos._core.storage.types import BLOB  # noqa

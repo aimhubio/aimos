@@ -2,10 +2,10 @@
  UI Components
 ==============
 
-Aim makes it easy to display and visualize almost any logged data.
+AimOS makes it easy to display and visualize almost any logged data.
 The API reference is divided into sections by the data type you want to visualize.
 
-Explore the components and its interface to learn more on how to build awesome observability apps with Aim.
+Explore the components and its interface to learn more on how to build awesome observability apps with AimOS.
 
 Sections:
 

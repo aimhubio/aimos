@@ -16,7 +16,7 @@ from aimcore.transport.heartbeat import HeartbeatSender
 from aimcore.transport.config import (
     AIM_CLIENT_QUEUE_MAX_MEMORY,
 )
-from aim._core.storage.treeutils import encode_tree, decode_tree
+from aimos._core.storage.treeutils import encode_tree, decode_tree
 
 
 DEFAULT_RETRY_INTERVAL = 0.1  # 100 ms
@@ -88,7 +88,7 @@ class Client:
             self.reinitialize_resource(handler)
 
     def _check_remote_version_compatibility(self):
-        from aim.__version__ import __version__ as client_version
+        from aimos.__version__ import __version__ as client_version
 
         error_message_template = 'The Aim Remote tracking server version ({}) '\
                                  'is not compatible with the Aim client version ({}).'\
@@ -101,8 +101,8 @@ class Client:
         remote_version = self.get_version()
 
         # server doesn't yet have the `get_version()` method implemented
-        if remote_version == '<4.0.0':
-            RuntimeError(error_message_template.format(remote_version, client_version))
+        # if remote_version == '<4.0.0':
+        #    RuntimeError(error_message_template.format(remote_version, client_version))
 
         # compare versions
         if client_version == remote_version:

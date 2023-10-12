@@ -1,5 +1,5 @@
-from aim.sdk import Repo
-from aim.sdk.types import QueryReportMode
+from aimos.sdk import Repo
+from aimos.sdk.types import QueryReportMode
 from aimcore.web.api.runs.utils import get_run_props
 from tests.perf_tests.utils import timing
 

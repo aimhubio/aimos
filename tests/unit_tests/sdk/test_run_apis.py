@@ -2,8 +2,8 @@ import pytest
 
 from unit_tests.base import TestBase
 
-from aim.sdk import Repo
-from aim.sdk.context import Context
+from aimos.sdk import Repo
+from aimos.sdk.context import Context
 
 
 class TestRunMetricNumpyTypes(TestBase):

@@ -2,7 +2,7 @@ import uuid
 import sqlalchemy as sa
 
 from aimcore.web.api.db import Base
-from aim._sdk.utils import utc_now
+from aimos._sdk.utils import utc_now
 
 
 class Dashboard(Base):

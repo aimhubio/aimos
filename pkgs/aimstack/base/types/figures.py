@@ -2,15 +2,15 @@ import io
 import logging
 import os.path
 
-from aim import Record
-from aim._sdk.num_utils import inst_has_typename
-from aim._sdk.blob import BLOB
+from aimos import Record
+from aimos._sdk.num_utils import inst_has_typename
+from aimos._sdk.blob import BLOB
 
 
 logger = logging.getLogger(__name__)
 
 
-@Record.alias('aim.figure')
+@Record.alias('aimos.figure')
 class Figure(Record):
     """
     Figure object can be used for storing Plotly or Matplotlib figures into Aim repository.
@@ -58,8 +58,8 @@ class Figure(Record):
             raise ModuleNotFoundError('Plotly is required to track matplotlib figure.')
 
         try:
-            logger.warning('Tracking a matplotlib object using "aim.Figure" might not behave as expected.'
-                           'In such cases, consider tracking with "aim.Image".')
+            logger.warning('Tracking a matplotlib object using "aimos.Figure" might not behave as expected.'
+                           'In such cases, consider tracking with "aimos.Image".')
             for ax in obj.axes:
                 for collection in ax.collections:
                     if not hasattr(collection, "get_offset_position"):

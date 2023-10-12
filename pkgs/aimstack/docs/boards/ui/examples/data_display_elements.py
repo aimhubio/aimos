@@ -44,7 +44,7 @@ ui.link('External link to Aim GitHub page',
 
 # Code block
 ui.code("""# This is a code block
-from aim import Metric
+from aimos import Metric
 
 metric = Metric.filter()
 

@@ -9,7 +9,7 @@ from tensorboard.compat.proto.event_pb2 import Event
 from tensorboard.util.tensor_util import make_tensor_proto
 from torch.utils.tensorboard.summary import image, scalar, histogram, histogram_raw
 
-from aim import Image, Distribution
+from aimos import Image, Distribution
 from aimstack.tensorboard_tracker.tracker import TensorboardFolderTracker
 
 from unit_tests.base import TestBase

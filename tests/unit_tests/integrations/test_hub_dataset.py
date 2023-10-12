@@ -10,7 +10,7 @@ class TestHubDatasetIntegration(TestBase):
         import hub
 
         from aimstack.ml.models.hub_dataset import HubDataset
-        from aim.sdk import Run
+        from aimos.sdk import Run
 
         # create dataset object
         ds = hub.dataset('hub://activeloop/cifar100-test')

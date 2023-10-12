@@ -3,8 +3,8 @@ from parameterized import parameterized
 from unit_tests.base import PrefilledDataTestBase
 from unit_tests.utils import full_class_name
 
-from aim.sdk.types import QueryReportMode
-from aim.sdk.query import syntax_error_check
+from aimos.sdk.types import QueryReportMode
+from aimos.sdk.query import syntax_error_check
 
 
 class TestQuery(PrefilledDataTestBase):

@@ -11,19 +11,19 @@ from itertools import chain, repeat
 from typing import List
 import numpy as np
 
-from aim._sdk.num_utils import inst_has_typename
-from aim import Record
-from aim._sdk.blob import BLOB
+from aimos._sdk.num_utils import inst_has_typename
+from aimos import Record
+from aimos._sdk.blob import BLOB
 
 logger = logging.getLogger(__name__)
 
 
-@Record.alias('aim.image')
+@Record.alias('aimos.image')
 class Image(Record):
     """Image object used to store image objects in Aim repository...
 
     Args:
-         image (:obj:): pillow `Image` object or `torch.Tensor` or `numpy.array` used to construct `aim.Image`.
+         image (:obj:): pillow `Image` object or `torch.Tensor` or `numpy.array` used to construct `aimos.Image`.
          caption (:obj:`str`, optional): Optional image caption. '' by default.
          format (:obj:`str`, optional): Parameter for PIL's .save() method. 'png' by default.
          quality (:obj:`int`, optional): Parameter for PIL's .save() method. 90 by default.
@@ -66,7 +66,7 @@ class Image(Record):
             self._from_matplotlib_figure(image, params)
         else:
             raise TypeError(
-                f'Cannot convert to aim.Image. Unsupported type {type(image)}.')
+                f'Cannot convert to aimos.Image. Unsupported type {type(image)}.')
         self.caption = caption
 
     @property
@@ -120,7 +120,7 @@ class Image(Record):
         return self.storage['width'], self.storage['height']
 
     def to_pil_image(self) -> PILImage.Image:
-        """Method to convert aim.Image to pillow Image"""
+        """Method to convert aimos.Image to pillow Image"""
         pil_img = PILImage.open(BytesIO(bytes(self.storage['data'])))
         assert pil_img.size == self.size
         return pil_img
@@ -202,7 +202,7 @@ class Image(Record):
     def _from_numpy_array(self, array: np.ndarray, params):
         if array.ndim not in {2, 3}:
             raise ValueError(
-                'Cannot convert to aim.Image. array must have 2/3-D shape.')
+                'Cannot convert to aimos.Image. array must have 2/3-D shape.')
 
         if array.ndim == 3 and array.shape[2] == 1:  # greyscale
             pil_image = PILImage.fromarray(array[:, :, 0])
@@ -219,7 +219,7 @@ class Image(Record):
 
         if tensor.ndim not in {2, 3}:
             raise ValueError(
-                'Cannot convert to aim.Image. Tensor must have 2/3-D shape.')
+                'Cannot convert to aimos.Image. Tensor must have 2/3-D shape.')
         if tensor.is_floating_point():
             tensor = tensor.mul(255).byte()
         array: np.ndarray = tensor.cpu().numpy()
@@ -244,7 +244,7 @@ class Image(Record):
 
         if tensor.ndim not in {2, 3}:
             raise ValueError(
-                'Cannot convert to aim.Image. Tensor must have 2/3-D shape.')
+                'Cannot convert to aimos.Image. Tensor must have 2/3-D shape.')
 
         if tensor.dtype.is_floating:
             tensor = tf.cast(tf.math.scalar_mul(255.0, tensor), tf.uint8)

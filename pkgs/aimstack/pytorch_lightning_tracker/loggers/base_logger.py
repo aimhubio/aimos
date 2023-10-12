@@ -24,8 +24,8 @@ except ImportError:
         'Please install it with command: \n pip install lightning'
     )
 
-from aim import Repo
-from aim._sdk.utils import clean_repo_path, get_aim_repo_name
+from aimos import Repo
+from aimos._sdk.utils import clean_repo_path, get_aim_repo_name
 from aimstack.experiment_tracker import TrainingRun
 
 

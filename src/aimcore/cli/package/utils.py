@@ -14,7 +14,7 @@ __author__ = '{author}'
 __category__ = '{category}'
 
 # The following lines are auto-generated. Please do not remove them.
-from aim import register_package
+from aimos import register_package
 register_package(__name__)
 
 """

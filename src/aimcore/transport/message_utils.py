@@ -3,8 +3,8 @@ import struct
 import json
 from typing import Iterator, Tuple
 
-from aim._core.storage.object import CustomObject
-from aim._core.storage.types import BLOB
+from aimos._core.storage.object import CustomObject
+from aimos._core.storage.types import BLOB
 
 
 def pack_args(tree: Iterator[Tuple[bytes, bytes]]) -> bytes:
@@ -81,9 +81,9 @@ class UnauthorizedRequestError(RuntimeError):
         self.handler = handler
 
 
-@CustomObject.alias('aim.resource')
+@CustomObject.alias('aimos.resource')
 class ResourceObject(CustomObject):
-    AIM_NAME = 'aim.resource'
+    AIM_NAME = 'aimos.resource'
 
     def __init__(self, handler):
         self.storage['handler'] = handler

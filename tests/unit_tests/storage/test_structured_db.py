@@ -1,6 +1,6 @@
 from unit_tests.base import PrefilledDataTestBase
 
-from aim.sdk.utils import generate_run_hash
+from aimos.sdk.utils import generate_run_hash
 
 
 class TestStructuredDatabase(PrefilledDataTestBase):

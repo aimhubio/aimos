@@ -1,7 +1,7 @@
 from datasets import Dataset, DatasetDict
 from logging import getLogger
 
-from aim import Record
+from aimos import Record
 
 logger = getLogger(__name__)
 

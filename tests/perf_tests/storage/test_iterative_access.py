@@ -1,4 +1,4 @@
-from aim import Repo
+from aimos import Repo
 
 from tests.perf_tests.base import StorageTestBase
 from tests.perf_tests.utils import get_baseline, write_baseline

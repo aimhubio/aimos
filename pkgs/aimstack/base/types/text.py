@@ -1,13 +1,13 @@
-from aim import Record
-from aim._sdk.blob import BLOB
+from aimos import Record
+from aimos._sdk.blob import BLOB
 
 
-@Record.alias('aim.text')
+@Record.alias('aimos.text')
 class Text(Record):
     """Text object used to store text objects in Aim repository.
 
         Args:
-             text (:obj:): str object used to construct `aim.Text`.
+             text (:obj:): str object used to construct `aimos.Text`.
         """
 
     AIM_NAME = 'base.Text'

@@ -1,10 +1,10 @@
 import numpy as np
 
-from aim import Record
-from aim._sdk.blob import BLOB
+from aimos import Record
+from aimos._sdk.blob import BLOB
 
 
-@Record.alias('aim.distribution')
+@Record.alias('aimos.distribution')
 class Distribution(Record):
     """Distribution object used to store distribution objects in Aim repository.
 

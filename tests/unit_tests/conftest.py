@@ -1,11 +1,11 @@
 import os
 import shutil
 
-from aim.sdk.repo import Repo, _get_tracking_queue
+from aimos.sdk.repo import Repo, _get_tracking_queue
 from aimcore.web.utils import exec_cmd
 from aimcore.cli.ui import build_db_upgrade_command
-from aim.sdk.configs import AIM_REPO_NAME, AIM_ENV_MODE_KEY
-from aim.core.utils.tracking import analytics
+from aimos.sdk.configs import AIM_REPO_NAME, AIM_ENV_MODE_KEY
+from aimos.core.utils.tracking import analytics
 
 TEST_REPO_PATH = '.aim-test-repo'
 

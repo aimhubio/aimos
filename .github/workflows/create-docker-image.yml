@@ -1,10 +1,10 @@
-name: aim docker image pipeline
+name: aimos docker image pipeline
 
 on:
   workflow_dispatch:
     inputs:
       pkg_version:
-        description: 'Aim package version'
+        description: 'AimOS package version'
         required: true
         type: string
 
@@ -28,7 +28,7 @@ jobs:
           DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
         run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
 
-      - name: Build & Push aim image
+      - name: Build & Push aimos image
         env:
           AIM_VERSION: ${{ github.event.inputs.pkg_version }}
         run: . ./.github/workflow_files/create-docker-image.sh

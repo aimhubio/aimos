@@ -3,7 +3,7 @@ import fnmatch
 from typing import List, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from aim._sdk.repo import Repo
+    from aimos._sdk.repo import Repo
 
 
 def match_runs(repo: 'Repo', hashes: List[str]) -> List[str]:

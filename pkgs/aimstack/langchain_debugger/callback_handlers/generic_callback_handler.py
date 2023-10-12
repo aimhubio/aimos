@@ -17,7 +17,7 @@ Classes:
 from copy import deepcopy
 from typing import Any, Dict, List
 
-from aim import Repo
+from aimos import Repo
 
 try:
     from langchain.callbacks.base import BaseCallbackHandler

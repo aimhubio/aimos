@@ -1,3 +1,3 @@
 ################# 
-Aim on Kubernetes
+AimOS on Kubernetes
 #################

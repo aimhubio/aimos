@@ -3,7 +3,7 @@ import os
 from unittest import mock
 from unittest.mock import MagicMock
 
-import aim.sdk.utils as utils
+import aimos.sdk.utils as utils
 
 
 class TestUtils(unittest.TestCase):

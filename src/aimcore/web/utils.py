@@ -6,9 +6,9 @@ from importlib import import_module
 from cachetools.func import ttl_cache
 
 from aimcore.web.configs import AIM_UI_MOUNTED_REPO_PATH
-from aim._sdk.configs import get_aim_repo_name
-from aim._sdk.utils import clean_repo_path
-from aim._sdk.package_utils import Package
+from aimos._sdk.configs import get_aim_repo_name
+from aimos._sdk.utils import clean_repo_path
+from aimos._sdk.package_utils import Package
 
 
 class ShellCommandException(Exception):

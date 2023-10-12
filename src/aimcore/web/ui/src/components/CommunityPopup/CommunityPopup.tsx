@@ -68,14 +68,14 @@ function CommunityPopup(props: ICommunityPopupProps) {
             component='p'
             className='CommunityPopup__tooltip__title'
           >
-            📣 JOIN THE AIM COMMUNITY!
+            📣 JOIN THE AIMOS COMMUNITY!
           </Text>
           <div className='CommunityPopup__tooltip__content'>
             <Text weight={600} tint={80} size={14} component='p'>
-              - Get early access to upcoming Aim features
+              - Get early access to upcoming AimOS features
             </Text>
             <Text weight={600} tint={80} size={14} component='p'>
-              - Meet other Aim users
+              - Meet other AimOS users
             </Text>
             <Text weight={600} tint={80} size={14} component='p'>
               - Discuss all-things MLOps and ML Research

@@ -1,5 +1,5 @@
-from aim import Repo, Sequence, Container
-from aim.utils import sequence_data
+from aimos import Repo, Sequence, Container
+from aimos.utils import sequence_data
 
 
 def get_project_stats():

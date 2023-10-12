@@ -2,8 +2,8 @@ import time
 
 from unit_tests.base import TestBase
 
-from aim.sdk.types import QueryReportMode
-from aim.sdk import Run
+from aimos.sdk.types import QueryReportMode
+from aimos.sdk import Run
 
 
 class TestRunResourceTracker(TestBase):

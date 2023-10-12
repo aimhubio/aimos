@@ -4,8 +4,8 @@ Acme
 
 `AimCallback` for `Acme` is designed to enhance your experiment logging and monitoring. It thoroughly records essential information, including hyperparameters, training, validation, and test time metrics like loss and accuracy. Moreover, it offers comprehensive system usage tracking, keeping an eye on CPU and GPU memory utilization.
 
-Aim provides a built-in callback to easily track `Acme <https://dm-acme.readthedocs.io/en/latest/>`_ trainings.
-It takes few simple steps to integrate Aim into your training script.
+AimOS provides a built-in callback to easily track `Acme <https://dm-acme.readthedocs.io/en/latest/>`_ trainings.
+It takes few simple steps to integrate AimOS into your training script.
 
 
 Step 1: Explicitly import the `AimCallback` and `AimWriter` for tracking training metadata.
@@ -14,7 +14,7 @@ Step 1: Explicitly import the `AimCallback` and `AimWriter` for tracking trainin
 
     from aimstack.experiment_tracker.acme import Writer as AimWriter, Callback as AimCallback
 
-Step 2: Initialize an Aim Run via `AimCallback`, and create a log factory using the Run.
+Step 2: Initialize an AimOS Run via `AimCallback`, and create a log factory using the Run.
 
 .. code-block:: python
 
@@ -38,5 +38,5 @@ Step 3: Pass the logger factory to `logger_factory` upon initiating your trainin
         seed=0,
         max_num_actor_steps=5000)
   
-See `AimCallback` source `here <https://github.com/aimhubio/aim/blob/main/pkgs/aimstack/acme_tracker/callbacks/base_callback.py>`_.
-Check out a simple example `here <https://github.com/aimhubio/aim/blob/main/examples/acme_track.py>`_.
+See `AimCallback` source `here <https://github.com/aimhubio/aimos/blob/main/pkgs/aimstack/acme_tracker/callbacks/base_callback.py>`_.
+Check out a simple example `here <https://github.com/aimhubio/aimos/blob/main/examples/acme_track.py>`_.

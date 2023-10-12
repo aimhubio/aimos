@@ -3,7 +3,7 @@ import os
 
 from fastapi import APIRouter
 
-from aim._sdk.repo import Repo
+from aimos._sdk.repo import Repo
 from aimcore.transport.config import AIM_SERVER_MOUNTED_REPO_PATH
 
 
@@ -32,7 +32,7 @@ class ClientRouter:
             del cls.client_heartbeat_pool[client_uri]
 
     async def get_version(self):
-        from aim.__version__ import __version__ as aim_version
+        from aimos.__version__ import __version__ as aim_version
 
         return {'version': aim_version}
 

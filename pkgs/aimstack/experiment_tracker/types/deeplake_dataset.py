@@ -3,7 +3,7 @@ import warnings
 import logging
 from deeplake.util.exceptions import ReadOnlyModeError
 
-from aim import Record
+from aimos import Record
 
 logger = logging.getLogger(__name__)
 
@@ -40,8 +40,8 @@ class DeeplakeDataset(Record):
 
         import deeplake
 
-        from aim._sdk.objects.plugins.deeplake_dataset import DeeplakeDataset
-        from aim._sdk import Run
+        from aimos._sdk.objects.plugins.deeplake_dataset import DeeplakeDataset
+        from aimos._sdk import Run
 
         # create dataset object
         ds = deeplake.dataset('hub://activeloop/cifar100-test')

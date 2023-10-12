@@ -5,8 +5,8 @@ from parameterized import parameterized
 from unit_tests.base import PrefilledDataApiTestBase, ApiTestBase
 from unit_tests.utils import decode_encoded_tree_stream
 
-from aim.core.storage.treeutils import decode_tree
-from aim.sdk.run import Run
+from aimos.core.storage.treeutils import decode_tree
+from aimos.sdk.run import Run
 
 
 class TestRunApi(PrefilledDataApiTestBase):

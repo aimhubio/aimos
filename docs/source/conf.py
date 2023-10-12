@@ -23,14 +23,14 @@ PATH_HERE = os.path.abspath(os.path.dirname(__file__))
 PATH_ROOT = os.path.join(PATH_HERE, '..', '..')
 
 spec = spec_from_file_location(
-    'src/python/aim/__about__.py', os.path.join(PATH_ROOT, 'src', 'python', 'aim', '__about__.py')
+    'src/python/aimos/__about__.py', os.path.join(PATH_ROOT, 'src', 'python', 'aimos', '__about__.py')
 )
 about = module_from_spec(spec)
 spec.loader.exec_module(about)
 
 # -- Project information -----------------------------------------------------
 
-project = 'Aim'
+project = 'AimOS'
 copyright = about.__copyright__
 author = about.__author__
 
@@ -99,7 +99,7 @@ pygments_style = 'sphinx'
 html_theme = 'furo'
 
 html_theme_options = {
-    "source_repository": "https://github.com/aimhubio/aim/",
+    "source_repository": "https://github.com/aimhubio/aimos/",
     "source_branch": "main",
     "source_directory": "docs/",
 }

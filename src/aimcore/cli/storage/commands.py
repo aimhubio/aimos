@@ -4,8 +4,8 @@ from tqdm import tqdm
 
 from aimcore.cli.runs.utils import match_runs
 
-from aim._sdk.utils import backup_run, restore_run_backup
-from aim._sdk.repo import Repo
+from aimos._sdk.utils import backup_run, restore_run_backup
+from aimos._sdk.repo import Repo
 
 
 @click.group()
@@ -44,7 +44,7 @@ def to_3_11(ctx, hashes, yes):
         confirmed = True
     else:
         confirmed = click.confirm(f'This command will optimize the metrics data for {len(matched_hashes)} '
-                                  f'runs from aim repo located at \'{repo_path}\'. This process might take a while. '
+                                  f'runs from aimos repo located at \'{repo_path}\'. This process might take a while. '
                                   f'Do you want to proceed?')
     if not confirmed:
         return
@@ -87,7 +87,7 @@ def restore_runs(ctx, hashes, yes):
     if yes:
         confirmed = True
     else:
-        confirmed = click.confirm(f'This command will restore {len(matched_hashes)} runs from aim repo '
+        confirmed = click.confirm(f'This command will restore {len(matched_hashes)} runs from aimos repo '
                                   f'located at \'{repo_path}\'. Do you want to proceed?')
     if not confirmed:
         return

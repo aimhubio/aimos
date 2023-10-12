@@ -12,13 +12,13 @@ from aimcore.web.configs import (
     AIM_PROXY_URL,
     AIM_PROFILER_KEY
 )
-from aim._sdk.configs import AIM_ENV_MODE_KEY
-from aim._sdk.repo import Repo
+from aimos._sdk.configs import AIM_ENV_MODE_KEY
+from aimos._sdk.repo import Repo
 
 from aimcore.web.utils import exec_cmd
 from aimcore.web.utils import ShellCommandException
 
-from aim._ext.tracking import analytics
+from aimos._ext.tracking import analytics
 
 
 @click.command('ui')
@@ -129,11 +129,11 @@ def ui(host, port, repo, package,
         os.environ[AIM_PROFILER_KEY] = '1'
 
     if dev:
-        import aim
+        import aimos
         import aimstack
         import aimcore
 
-        reload_dirs = [os.path.dirname(aim.__file__), os.path.dirname(aimcore.__file__),
+        reload_dirs = [os.path.dirname(aimos.__file__), os.path.dirname(aimcore.__file__),
                        os.path.dirname(aimstack.__file__), dev_package_dir]
     else:
         reload_dirs = []

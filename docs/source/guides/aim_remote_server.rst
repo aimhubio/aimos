@@ -1,3 +1,3 @@
 #######################
-Setup Aim Remote Server
+Setup AimOS Remote Server
 #######################

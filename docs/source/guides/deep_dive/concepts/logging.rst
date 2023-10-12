@@ -2,8 +2,8 @@
 Logging Abstractions
 ####################
 
-Aim is built to log vast quantities of logs from every part of the AI Systems.
-There are three main concepts when logging with Aim:
+AimOS is built to log vast quantities of logs from every part of the AI Systems.
+There are three main concepts when logging with AimOS:
 - Records - a single log entry
 - Sequences - a collection of records
 - Containers - a set of interconnected sequences
@@ -35,7 +35,7 @@ Sequences are the main interface for logging. `Metric` is an example of a sequen
         metric.track(i, epoch=1)
 
 
-Aim comes with a number of predefined sequences such as Metric, SystemMetric, TextSequence.
+AimOS comes with a number of predefined sequences such as Metric, SystemMetric, TextSequence.
 
 
 Containers
@@ -44,7 +44,7 @@ Containers are a set of interconnected sequences.
 Role of the container is to help organize the logged records and sequences into coherent structure that will be queryable.
 
 Containers also allow an elegant design of every part of the AI System - Training Run, Model Eval, Production, LLM experiment etc.
-Aim comes with a number of predefined containers such as Run.
+AimOS comes with a number of predefined containers such as Run.
 
 .. code-block:: python
 

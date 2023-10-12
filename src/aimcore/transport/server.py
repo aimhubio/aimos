@@ -18,7 +18,7 @@ from aimcore.transport.handlers import (
     get_repo
 )
 from aimcore.transport.config import AIM_SERVER_BASE_PATH
-from aim._core.storage.treeutils import encode_tree, decode_tree
+from aimos._core.storage.treeutils import encode_tree, decode_tree
 
 
 def prepare_resource_registry():

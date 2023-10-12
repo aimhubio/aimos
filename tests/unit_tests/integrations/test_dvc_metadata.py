@@ -7,11 +7,11 @@ from unittest.mock import patch
 
 class TestDVCIntegration(TestBase):
 
-    @patch("aim.sdk.objects.plugins.dvc_metadata.Repo")
+    @patch("aimos.sdk.objects.plugins.dvc_metadata.Repo")
     @pytest.mark.skipif(not is_package_installed('dvc'), reason="'dvc' is not installed. skipping.")
     def test_dvc_files_as_run_param(self, mRepo):
         from aimstack.ml.models.dvc_metadata import DvcData
-        from aim.sdk import Run
+        from aimos.sdk import Run
 
         tracked_files = (
             {'path': 'test_file_1.txt'},

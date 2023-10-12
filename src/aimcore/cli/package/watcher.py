@@ -9,7 +9,7 @@ import watchdog.events as events
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from aim._sdk.repo import Repo
+    from aimos._sdk.repo import Repo
 
 
 class SourceFileChangeHandler(FileSystemEventHandler):

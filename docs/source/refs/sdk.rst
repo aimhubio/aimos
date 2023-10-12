@@ -1,25 +1,25 @@
 ===============
- Aim Python SDK
+ AimOS Python SDK
 ===============
 
-API Reference for Aim Python SDK classes
+API Reference for AimOS Python SDK classes
 ========================================
 
-Aim is designed to enable logging of any data type.
+AimOS is designed to enable logging of any data type.
 This reference will guide you through the fundamental data building blocks,
 as well as data retrieval approaches.
 
-.. currentmodule:: aim._sdk
-.. automodule:: aim._sdk
+.. currentmodule:: aimos._sdk
+.. automodule:: aimos._sdk
 
 Repo class reference
 ====================
-.. currentmodule:: aim._sdk.repo
-.. automodule:: aim._sdk.repo
+.. currentmodule:: aimos._sdk.repo
+.. automodule:: aimos._sdk.repo
 
 Repository management
 ---------------------
-.. currentmodule:: aim._sdk.repo
+.. currentmodule:: aimos._sdk.repo
 .. autosummary::
     :nosignatures:
 
@@ -34,7 +34,7 @@ Repository management
 
 Data access interface
 ---------------------
-.. currentmodule:: aim._sdk.repo
+.. currentmodule:: aimos._sdk.repo
 .. autosummary::
     :nosignatures:
 
@@ -51,7 +51,7 @@ Data access interface
 
 Package and Types information
 -----------------------------
-.. currentmodule:: aim._sdk.repo
+.. currentmodule:: aimos._sdk.repo
 .. autosummary::
     :nosignatures:
 
@@ -64,7 +64,7 @@ Package and Types information
 
 Data management interface
 -------------------------
-.. currentmodule:: aim._sdk.repo
+.. currentmodule:: aimos._sdk.repo
 .. autosummary::
     :nosignatures:
 
@@ -81,12 +81,12 @@ Data management interface
 
 Container class interface
 =========================
-.. currentmodule:: aim._sdk.container
-.. automodule:: aim._sdk.container
+.. currentmodule:: aimos._sdk.container
+.. automodule:: aimos._sdk.container
 
 Container creation and retrieval
 --------------------------------
-.. currentmodule:: aim._sdk.container
+.. currentmodule:: aimos._sdk.container
 .. autosummary::
     :nosignatures:
 
@@ -97,7 +97,7 @@ Container creation and retrieval
 
 Params and properties management
 --------------------------------
-.. currentmodule:: aim._sdk.container
+.. currentmodule:: aimos._sdk.container
 .. autosummary::
     :nosignatures:
 
@@ -112,7 +112,7 @@ Params and properties management
 
 Sequence data management
 ------------------------
-.. currentmodule:: aim._sdk.container
+.. currentmodule:: aimos._sdk.container
 .. autosummary::
     :nosignatures:
 
@@ -126,7 +126,7 @@ Sequence data management
 
 Container metadata and management
 ---------------------------------
-.. currentmodule:: aim._sdk.container
+.. currentmodule:: aimos._sdk.container
 .. autosummary::
     :nosignatures:
 
@@ -137,12 +137,12 @@ Container metadata and management
     Container.get_full_typename
     Container.version
 
-.. autoclass:: aim._sdk.container.Container
+.. autoclass:: aimos._sdk.container.Container
     :members:
     :special-members:
     :no-undoc-members:
 
-.. autoclass:: aim._sdk.container.ContainerSequenceMap
+.. autoclass:: aimos._sdk.container.ContainerSequenceMap
     :members:
     :special-members:
     :no-undoc-members:
@@ -150,7 +150,7 @@ Container metadata and management
 Sequence class interface
 ========================
 
-.. currentmodule:: aim._sdk.sequence
+.. currentmodule:: aimos._sdk.sequence
 .. autosummary::
     :nosignatures:
 
@@ -169,10 +169,10 @@ Sequence class interface
     :special-members:
     :no-undoc-members:
 
-aim.Record
+aimos.Record
 ------------
 
-.. autoclass:: aim._sdk.record.Record
+.. autoclass:: aimos._sdk.record.Record
     :members:
     :special-members:
     :no-undoc-members:

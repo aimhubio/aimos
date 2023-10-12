@@ -10,7 +10,7 @@ class TestDeeplakeDatasetIntegration(TestBase):
         import deeplake
 
         from aimstack.ml.models.deeplake_dataset import DeeplakeDataset
-        from aim.sdk import Run
+        from aimos.sdk import Run
 
         # create dataset object
         ds = deeplake.dataset('hub://activeloop/cifar100-test')

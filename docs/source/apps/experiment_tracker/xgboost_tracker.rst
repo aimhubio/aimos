@@ -20,5 +20,5 @@ Step 2: XGBoost provides the `xgboost.train` method for model training, in which
     xgboost.train(param, dtrain, num_round, watchlist,
                                 callbacks=[AimCallback(experiment="test_experiment")])
 
-See `AimCallback` source `here <https://github.com/aimhubio/aim/blob/main/pkgs/aimstack/xgboost_tracker/callbacks/base_callback.py>`_.
-Check out a simple example `here <https://github.com/aimhubio/aim/blob/main/examples/xgboost_track.py>`_.
+See `AimCallback` source `here <https://github.com/aimhubio/aimos/blob/main/pkgs/aimstack/xgboost_tracker/callbacks/base_callback.py>`_.
+Check out a simple example `here <https://github.com/aimhubio/aimos/blob/main/examples/xgboost_track.py>`_.

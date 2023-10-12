@@ -8,11 +8,11 @@ on:
       - feature/**
     paths:
       - 'src/aimcore/cli/**'
-      - 'src/python/aim/_ext/**'
-      - 'src/python/aim/_sdk/**'
+      - 'src/python/aimos/_ext/**'
+      - 'src/python/aimos/_sdk/**'
       - 'src/aimcore/web/api/**'
-      - 'src/python/aim/_core/storage/**'
-      - 'src/python/aim/utils/**'
+      - 'src/python/aimos/_core/storage/**'
+      - 'src/python/aimos/utils/**'
       - '.github/workflows/pull-request.yml'
       - 'tests/**'
       - 'setup.py'
@@ -62,31 +62,4 @@ jobs:
 
       - name: unit-tests
         run: |
-          pytest tests/unit_tests --cov-config=pyproject.toml --cov=aim --cov-report=term --cov-fail-under=50
-
-  storage-performance-checks:
-    needs: run-checks
-    concurrency: perf-tests
-    runs-on: [self-hosted, performance-tests]
-    name: Performance tests
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-
-      - name: install deps
-        run: |
-          python3 -m venv venv
-          . venv/bin/activate
-          python -m pip install --upgrade pip
-          python -m pip install -r ./.github/workflow_files/requirements.txt
-          python -m pip install -r tests/perf_tests/requirements.txt
-
-      - name: perf tests
-        run: |
-          . venv/bin/activate
-          export AWS_ACCESS_KEY_ID=${{ secrets.AIM_LOGS_AWS_ACCESS_KEY_ID }}
-          export AWS_SECRET_ACCESS_KEY=${{ secrets.AIM_LOGS_AWS_SECRET_ACCESS_KEY }}
-          pytest tests/perf_tests || pytest --lf tests/perf_tests
+          pytest tests/unit_tests --cov-config=pyproject.toml --cov=aimos --cov-report=term --cov-fail-under=50

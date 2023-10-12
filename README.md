@@ -2,14 +2,11 @@
   <table>
     <tbody>
       <tr>
-        <td>Drop a star to support Aim ⭐</td>
+        <td>Drop a star to support AimOS ⭐</td>
         <td>
-          <a href="https://community.aimstack.io/">Join Aim discord community</a>
+          <a href="https://community.aimstack.io/">Join AimOS discord community</a>
           <img width="20px" src="https://user-images.githubusercontent.com/13848158/226759622-063b725d-8b3e-4c75-80c7-11fb04b7adf5.png">
         </td>
-      </tr>
-      <tr>
-        <td colspan="2"><p align="center">⚡ ⚡ Aim 4.0 stable has been released! ⚡ ⚡ !!</p></td>
       </tr>
     </tbody>
   </table>
@@ -95,7 +92,7 @@
 <br/>
 
 <p align="center">
-  AimStack offers enterprise support that's beyond core Aim. Contact via <a href="mailto:hello@aimstack.io">hello@aimstack.io</a> e-mail.
+  AimStack offers enterprise support that's beyond core AimOS. Contact via <a href="mailto:hello@aimstack.io">hello@aimstack.io</a> e-mail.
 </p>
 
 ---
@@ -105,8 +102,7 @@
   <a href="#-demos"><b>Demos</b></a> &bull;
   <a href="#-default-logging-apps"><b>Default logging apps</b></a> &bull;
   <a href="#-quick-start"><b>Quick Start</b></a> &bull;
-  <a href="https://github.com/aimhubio/aim/tree/main/examples"><b>Examples</b></a> &bull;
-  <a href="https://aimstack.readthedocs.io/en/latest/"><b>Documentation</b></a> &bull;
+  <a href="https://github.com/aimhubio/aimos/tree/main/examples"><b>Examples</b></a> &bull;
   <a href="#-community"><b>Community</b></a> &bull;
   <a href="https://aimstack.io/blog"><b>Blog</b></a> &bull;
 </h3>  
@@ -115,8 +111,8 @@
 
 # ℹ️ About
 
-Aim is an open-source operating system for logs. 
-With Aim you can build, run and combine any kind of logging applications - experiment tracking, production monitoring, AI System (LLM-based) monitoring, usage monitoring etc.
+AimOS is an open-source operating system for logs. 
+With AimOS you can build, run and combine any kind of logging applications - experiment tracking, production monitoring, AI System (LLM-based) monitoring, usage monitoring etc.
 
 The Logging applications are typically a combination of these components: 
 
@@ -125,16 +121,16 @@ The Logging applications are typically a combination of these components:
 - Automations over the data logged
 
 
-Aim comes installed with a number of default logging apps:
+AimOS comes installed with a number of default logging apps:
 
 - Base App - a basic generic log exploration and the logging primitives
 - AI Experiment Tracking App - log and explore your machine learning experiments. Includes integrations with the majority of leading ML frameworks.
 - AI Systems Tracing and Debugging Apps - a combination of variety of apps that log from langchain to llamaindex traces all in one place.
 
-Apart from running the logging apps, Aim comes with explorers and reports.
+Apart from running the logging apps, AimOS comes with explorers and reports.
 
 - Explorers are advanced logs comparison tools for specific kind of logs - they allow to compare 1000s of sessions of metrics, images, text, audio and other types of data.
-- Reports are embedded knowledge-base that operate with the apps and explorers seamlessly to enable capture the knowledge built on top of the logged  data from the observations through Aim apps and explorers.
+- Reports are embedded knowledge-base that operate with the apps and explorers seamlessly to enable capture the knowledge built on top of the logged  data from the observations through AimOS apps and explorers.
 
 With the rise of AI Systems and the challenges it brings forward, logging apps are going to be a crucial part of the software. 
 
@@ -150,9 +146,9 @@ Our mission is to democratize developer tools for building AI.
 
 ### Base App
 
-A general observability over anything logged with Aim.
+A general observability over anything logged with AimOS.
 
-| Visualize all the logs ever logged with Aim for the given project 🗺️ |
+| Visualize all the logs ever logged with AimOS for the given project 🗺️ |
 | --- |
 | Base types to log common artifacts such as Images, Audio objects, Figures, Metrics  |
 | High-level overview of the logs, the types logged and the respective sessions/ containers  |
@@ -177,7 +173,7 @@ A general observability over anything logged with Aim.
           </td>
         <td>
           <ul>
-            <li>Metadata visualization via Aim Explorers</li>
+            <li>Metadata visualization via AimOS Explorers</li>
             <li>Grouping and aggregation</li>
             <li>Querying using Python expressions</li>
           </ul>
@@ -234,7 +230,7 @@ A general observability over anything logged with Aim.
 
 # 🎬 Demos
 
-Check out live Aim demos NOW to see it in action.
+Check out live AimOS demos NOW to see it in action.
 
 <table>
     <tr>
@@ -264,27 +260,27 @@ Check out live Aim demos NOW to see it in action.
 
 # 🌍 Default logging apps
 
-Aim comes pre-installed with a wide variety of apps. Here is the full list:
+AimOS comes pre-installed with a wide variety of apps. Here is the full list:
 
 | App Name             | Description                                                                                         | Category            | Docs     | Source  |
 |----------------------|-----------------------------------------------------------------------------------------------------|----------------------|----------|---------|
-| base                 | Base Aim app for general observability over anything logged with Aim. Includes base types to log common artifacts, such as Image, Audio object, Figure, Metric. | Base | [docs](https://aimstack.readthedocs.io/en/latest/apps/base_app.html) | [source](https://github.com/aimhubio/aim/tree/main/pkgs/aimstack/base) |
-| docs                 | Use this Aim app to access Aim docs. | Docs | -        | [source](https://github.com/aimhubio/aim/tree/main/pkgs/aimstack/docs) |
-| langchain_debugger   | Debugger for LangChain that logs LLMs prompts and generations, tools inputs/outputs, and chains metadata. | AI Systems Tracing  | [docs](https://aimstack.readthedocs.io/en/latest/apps/langchain_debugger.html) | [source](https://github.com/aimhubio/aim/tree/main/pkgs/aimstack/langchain_debugger) |
-| llamaindex_observer  | Debugger and observer for LlamaIndex. Logs metadata like retrieval nodes, queries and responses, embeddings chunks, etc. | AI Systems Tracing  | [docs](https://aimstack.readthedocs.io/en/latest/apps/llamaindex_observer.html) | [source](https://github.com/aimhubio/aim/tree/main/pkgs/aimstack/llamaindex_observer) |
-| experiment_tracker   | App for tracking and exploring ML experiments. Integrations with various ML libraries, including Acme, CatBoost, fastai, Hugging Face Transformers, Keras, Keras Tuner, LightGBM, MXNet, Optuna, PaddlePaddle, PyTorch Ignite, SDB3, and XGBoost. | Experiment Tracking | [docs](https://aimstack.readthedocs.io/en/latest/apps/experiment_tracker.html) | [source](https://github.com/aimhubio/aim/tree/main/pkgs/aimstack/experiment_tracker) |
+| base                 | Base AimOS app for general observability over anything logged with AimOS. Includes base types to log common artifacts, such as Image, Audio object, Figure, Metric. | Base | [docs](https://aimstack.readthedocs.io/en/latest/apps/base_app.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/base) |
+| docs                 | Use this AimOS app to access AimOS docs. | Docs | -        | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/docs) |
+| langchain_debugger   | Debugger for LangChain that logs LLMs prompts and generations, tools inputs/outputs, and chains metadata. | AI Systems Tracing  | [docs](https://aimstack.readthedocs.io/en/latest/apps/langchain_debugger.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/langchain_debugger) |
+| llamaindex_observer  | Debugger and observer for LlamaIndex. Logs metadata like retrieval nodes, queries and responses, embeddings chunks, etc. | AI Systems Tracing  | [docs](https://aimstack.readthedocs.io/en/latest/apps/llamaindex_observer.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/llamaindex_observer) |
+| experiment_tracker   | App for tracking and exploring ML experiments. Integrations with various ML libraries, including Acme, CatBoost, fastai, Hugging Face Transformers, Keras, Keras Tuner, LightGBM, MXNet, Optuna, PaddlePaddle, PyTorch Ignite, SDB3, and XGBoost. | Experiment Tracking | [docs](https://aimstack.readthedocs.io/en/latest/apps/experiment_tracker.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/experiment_tracker) |
 
 # 🏁 Quick start
 
-Follow the steps below to get started with Aim.
+Follow the steps below to get started with AimOS.
 
-## 1. Install Aim on your training environment
+## 1. Install AimOS on your training environment
 
 ```shell
-pip3 install aim
+pip3 install aimos
 ```
 
-## 2. Integrate Aim with your code
+## 2. Integrate AimOS with your code
 
 ```python
 from aimstack.base import Run, Metric
@@ -305,16 +301,16 @@ for i in range(1000):
       metric.track(i, epoch=1)
 ```
 
-## 3. Start Aim server
+## 3. Start AimOS server
 
 ```shell
-aim server
+aimos server
 ```
 
-## 4. Start Aim UI
+## 4. Start AimOS UI
 
 ```shell
-aim ui
+aimos ui
 ```
 
 # 🛣️ Roadmap
@@ -323,48 +319,30 @@ TODO:
 
 # 👥 Community
 
-## Aim README badge
+## AimOS README badge
 
-Add Aim badge to your README, if you've enjoyed using Aim in your work:
+Add AimOS badge to your README, if you've enjoyed using AimOS in your work:
 
-[![Aim](https://img.shields.io/badge/powered%20by-Aim-%231473E6)](https://github.com/aimhubio/aim)
+[![AimOS](https://img.shields.io/badge/powered%20by-Aim-%231473E6)](https://github.com/aimhubio/aimos)
 
 ```
-[![Aim](https://img.shields.io/badge/powered%20by-Aim-%231473E6)](https://github.com/aimhubio/aim)
+[![AimOS](https://img.shields.io/badge/powered%20by-Aim-%231473E6)](https://github.com/aimhubio/aimos)
 ```
 
-## Cite Aim in your papers
+## Contributing to AimOS
 
-In case you've found Aim helpful in your research journey, we'd be thrilled if you could acknowledge Aim's contribution:
+Considering contibuting to AimOS? 
+To get started, please take a moment to read the [CONTRIBUTING.md](https://github.com/aimhubio/aimos/blob/main/CONTRIBUTING.md) guide. 
 
-```bibtex
-@software{Arakelyan_Aim_2020,
-  author = {Arakelyan, Gor and Soghomonyan, Gevorg and {The Aim team}},
-  doi = {10.5281/zenodo.6536395},
-  license = {Apache-2.0},
-  month = {6},
-  title = {{Aim}},
-  url = {https://github.com/aimhubio/aim},
-  version = {3.9.3},
-  year = {2020}
-}
-```
+Join AimOS contributors by submitting your first pull request. Happy coding! 😊
 
-## Contributing to Aim
-
-Considering contibuting to Aim? 
-To get started, please take a moment to read the [CONTRIBUTING.md](https://github.com/aimhubio/aim/blob/main/CONTRIBUTING.md) guide. 
-
-Join Aim contributors by submitting your first pull request. Happy coding! 😊
-
-<a href="https://github.com/aimhubio/aim/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=aimhubio/aim" />
+<a href="https://github.com/aimhubio/aimos/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=aimhubio/aimos" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
 
 ## More questions?
 
-1. [Read the docs](https://aimstack.readthedocs.io/en/latest/)
-2. [Open a feature request or report a bug](https://github.com/aimhubio/aim/issues)
-3. [Join Discord community server](https://community.aimstack.io/)
+1. [Open a feature request or report a bug](https://github.com/aimhubio/aimos/issues)
+2. [Join Discord community server](https://community.aimstack.io/)

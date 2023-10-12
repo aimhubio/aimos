@@ -1,6 +1,6 @@
 ---
 name: Ask a question
-about: Ask and answer Aim related questions
+about: Ask and answer AimOS related questions
 title: ''
 labels: type / question
 assignees: ''

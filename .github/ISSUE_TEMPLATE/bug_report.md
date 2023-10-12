@@ -20,7 +20,7 @@ assignees: ''
 
 ### Environment
 
-- Aim Version (e.g., 3.0.1)
+- AimOS Version (e.g., 1.0.0)
 - Python version
 - pip version
 - OS (e.g., Linux)

@@ -1,4 +1,4 @@
-name: aim packaging pipeline
+name: aimos packaging pipeline
 
 on:
   workflow_call:
@@ -16,8 +16,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  aim-ui-dist:
-    if: ${{ github.event_name == 'schedule' || github.actor == 'gorarakelyan' || github.actor == 'alberttorosyan' || github.actor == 'roubkar' }}
+  aimos-ui-dist:
+    if: ${{ github.event_name == 'schedule' || github.actor == 'gorarakelyan' || github.actor == 'alberttorosyan' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
@@ -59,13 +59,13 @@ jobs:
           python -m twine upload -u __token__ -p "${PYPI_PASSWORD}" dist/*
 
   linux-dist:
-    if: ${{ github.event_name == 'schedule' || github.actor == 'gorarakelyan' || github.actor == 'alberttorosyan' || github.actor == 'roubkar' }}
+    if: ${{ github.event_name == 'schedule' || github.actor == 'gorarakelyan' || github.actor == 'alberttorosyan' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         manylinux-version: ['manylinux2014_x86_64', 'manylinux_2_24_x86_64']
     name: Linux wheels build (using Docker) ${{ matrix.manylinux-version }}
-    needs: aim-ui-dist
+    needs: aimos-ui-dist
     steps:
       - name: Install Docker & pull images
         run: |
@@ -78,10 +78,10 @@ jobs:
         with:
           ref: ${{ inputs.branch || github.ref }}
 
-      - name: Capture aim version
+      - name: Capture aimos version
         id: capture-version
         run: |
-          AIM_VERSION=$(< ./src/python/aim/VERSION)
+          AIM_VERSION=$(< ./src/python/aimos/VERSION)
           echo "::set-output name=AIM_VERSION::$AIM_VERSION"
 
       - name: Setup python
@@ -120,7 +120,7 @@ jobs:
           DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
         run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
 
-      - name: Build & Push aim image
+      - name: Build & Push aimos image
         if: matrix.manylinux-version == 'manylinux_2_24_x86_64'
         env:
           AIM_VERSION: ${{ steps.capture-version.outputs.AIM_VERSION }}
@@ -145,7 +145,7 @@ jobs:
       AIM_DEP_DIR: /tmp/aim_run/${{ github.run_number }}/${{ matrix.arch }}
       PYTHON: /opt/conda/${{ matrix.arch }}/envs/py${{ matrix.python-version }}/bin/python
 
-    needs: aim-ui-dist
+    needs: aimos-ui-dist
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2

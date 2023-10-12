@@ -15,7 +15,8 @@
 <br />
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/13848158/225620298-9f9293e9-a138-41fd-bd77-21d53d0490b7.png">
+  <img src="https://github.com/aimhubio/aimos/assets/13848158/723acdfc-5f35-42ff-88c2-9d506b885f15">
+  
   <h3>
     Open-source modular observability for AI Systems.
   </h3>
@@ -34,10 +35,10 @@
   
   [![Platform Support](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-blue)]()
   [![PyPI - Python Version](https://img.shields.io/badge/python-%3E%3D%203.7-blue)](https://pypi.org/project/aimos/)
-  [![PyPI Package](https://img.shields.io/pypi/v/aim?color=yellow)](https://pypi.org/project/aimos/)
+  [![PyPI Package](https://img.shields.io/pypi/v/aimos?color=yellow)](https://pypi.org/project/aimos/)
   [![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)
-  [![PyPI Downloads](https://img.shields.io/pypi/dw/aim?color=green)](https://pypi.org/project/aimos/)
-  [![Issues](https://img.shields.io/github/issues/aimhubio/aim)](http://github.com/aimhubio/aimos/issues)
+  [![PyPI Downloads](https://img.shields.io/pypi/dw/aimos?color=green)](https://pypi.org/project/aimos/)
+  [![Issues](https://img.shields.io/github/issues/aimhubio/aimos)](http://github.com/aimhubio/aimos/issues)
   
 </div>
 
@@ -71,22 +72,6 @@
   <img src="https://user-images.githubusercontent.com/97726819/225954674-42fbfdb3-0351-492d-9ea3-1d3ab2b545f5.png" height="60" />
   <img src="https://user-images.githubusercontent.com/97726819/225954678-25f1b626-2cb1-4e7e-ad83-f7c8ab679c6f.png" height="60" />
   <img src="https://user-images.githubusercontent.com/97726819/225954702-d18d2706-dc87-4e09-a678-f010f6d95736.png" height="60" />
-</div>
-
-<br/>
-
-<div align="center">
-  <sub><strong>TRUSTED BY ML TEAMS FROM:</strong></sub>  
-  <br/>
-  <br/>
-  <img src="https://user-images.githubusercontent.com/97726819/225952594-a21546f4-987f-42bd-9154-c22b50632b55.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225953224-291fbb6d-e31a-4e36-90ba-92a1dc20bacc.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225953339-4fcc3c99-dda2-4529-ac2a-29c8293be323.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225953084-1d88325a-ad5f-49eb-aa67-f064c4b9f39c.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225952955-397e0f26-f01e-4b25-bd70-9f292a6f77c2.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225952682-a843827b-e870-429d-96d8-3b4fd45471cd.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225952831-1c0e36aa-4120-4635-ab4e-bf1bc685477b.png" height="55" />
-  <img src="https://user-images.githubusercontent.com/97726819/225953432-4b27653a-aa12-4fbf-897c-01349afa2ad0.png" height="55" />
 </div>
 
 <br/>
@@ -313,20 +298,16 @@ aimos server
 aimos ui
 ```
 
-# 🛣️ Roadmap
-TODO:
-
-
 # 👥 Community
 
 ## AimOS README badge
 
 Add AimOS badge to your README, if you've enjoyed using AimOS in your work:
 
-[![AimOS](https://img.shields.io/badge/powered%20by-Aim-%231473E6)](https://github.com/aimhubio/aimos)
+[![AimOS](https://img.shields.io/badge/powered%20by-AimOS-%231473E6)](https://github.com/aimhubio/aimos)
 
 ```
-[![AimOS](https://img.shields.io/badge/powered%20by-Aim-%231473E6)](https://github.com/aimhubio/aimos)
+[![AimOS](https://img.shields.io/badge/powered%20by-AimOS-%231473E6)](https://github.com/aimhubio/aimos)
 ```
 
 ## Contributing to AimOS

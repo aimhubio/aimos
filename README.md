@@ -10,12 +10,13 @@
       </tr>
     </tbody>
   </table>
+
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://github.com/aimhubio/aimos/assets/13848158/723acdfc-5f35-42ff-88c2-9d506b885f15">
+  <img src="https://github.com/aimhubio/aimos/assets/13848158/fa8bf4f8-65f9-41f4-9152-acbe166e75d5">
   
   <h3>
     Open-source modular observability for AI Systems.

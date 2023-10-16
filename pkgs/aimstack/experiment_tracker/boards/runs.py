@@ -32,9 +32,15 @@ def get_table_data(data=[], page_size=10, page_num=1, should_fold=True):
     exclude_keys = ['type', 'container_type', 'container_full_type']
 
     runs = data[(page_num - 1) * page_size:page_num * page_size]
+    run_meta_fields = {
+        "experiment": [],
+        "description": [],
+    }
 
     for run in runs:
         items = run.items() if should_fold else flatten(run).items()
+        run_meta_fields["experiment"].append(run.experiment)
+        run_meta_fields["description"].append(run.description)
         for key, value in items:
             if key in exclude_keys:
                 continue
@@ -43,6 +49,10 @@ def get_table_data(data=[], page_size=10, page_num=1, should_fold=True):
                     table_data[key].append(f'{value}')
                 else:
                     table_data[key] = [f'{value}']
+    table_data = {
+        "hash": table_data.pop("hash"),
+        **run_meta_fields,
+        **table_data}
     return table_data
 
 

@@ -85,7 +85,7 @@ if metrics:
     grouped_data_length = len(grouped_data)
 
     column_numbers = [str(i) for i in range(1, int(grouped_data_length) + 1)]
-    column_count = row_controls.select('Columns', column_numbers, index=0)
+    column_count = row_controls.select('Columns', column_numbers, index=1)
 
     rows = ui.rows(math.ceil(grouped_data_length / int(column_count)))
 
@@ -100,24 +100,6 @@ if metrics:
                 col.line_chart(
                     data, x=x_axis, y=y_axis, color=color_by, stroke_style=stroke_style)
 
-    row1, row2 = ui.rows(2)
-
-    items_per_page = row1.select('Items per page', ('5', '10', '50', '100'))
-
-    total_pages = math.ceil((len(metrics) / int(items_per_page)))
-    page_numbers = [str(i) for i in range(1, total_pages + 1)]
-    page_num = row1.select('Page', page_numbers, index=0)
-
-    table_data = get_table_data(
-        data=metrics,
-        keys=['name', 'container.hash', 'context', 'range'],
-        page_size=int(items_per_page),
-        page_num=int(page_num),
-    )
-
-    row2.table(table_data, {
-        'container.hash': lambda val: ui.board_link('run.py', val, state={'container_hash': val}),
-    })
 
 else:
     ui.text('No metrics found')

@@ -88,6 +88,7 @@
   <a href="#-demos"><b>Demos</b></a> &bull;
   <a href="#-default-logging-apps"><b>Default logging apps</b></a> &bull;
   <a href="#-quick-start"><b>Quick Start</b></a> &bull;
+  <a href="https://aimos.readthedocs.io/en/latest/"><b>Documentation</b></a> &bull;
   <a href="https://github.com/aimhubio/aimos/tree/main/examples"><b>Examples</b></a> &bull;
   <a href="#-community"><b>Community</b></a> &bull;
   <a href="https://aimstack.io/blog"><b>Blog</b></a> &bull;
@@ -250,11 +251,11 @@ AimOS comes pre-installed with a wide variety of apps. Here is the full list:
 
 | App Name             | Description                                                                                         | Category            | Docs     | Source  |
 |----------------------|-----------------------------------------------------------------------------------------------------|----------------------|----------|---------|
-| base                 | Base AimOS app for general observability over anything logged with AimOS. Includes base types to log common artifacts, such as Image, Audio object, Figure, Metric. | Base | [docs](https://aimstack.readthedocs.io/en/latest/apps/base_app.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/base) |
+| base                 | Base AimOS app for general observability over anything logged with AimOS. Includes base types to log common artifacts, such as Image, Audio object, Figure, Metric. | Base | [docs](https://aimos.readthedocs.io/en/latest/apps/base_app.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/base) |
 | docs                 | Use this AimOS app to access AimOS docs. | Docs | -        | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/docs) |
-| langchain_debugger   | Debugger for LangChain that logs LLMs prompts and generations, tools inputs/outputs, and chains metadata. | AI Systems Tracing  | [docs](https://aimstack.readthedocs.io/en/latest/apps/langchain_debugger.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/langchain_debugger) |
-| llamaindex_observer  | Debugger and observer for LlamaIndex. Logs metadata like retrieval nodes, queries and responses, embeddings chunks, etc. | AI Systems Tracing  | [docs](https://aimstack.readthedocs.io/en/latest/apps/llamaindex_observer.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/llamaindex_observer) |
-| experiment_tracker   | App for tracking and exploring ML experiments. Integrations with various ML libraries, including Acme, CatBoost, fastai, Hugging Face Transformers, Keras, Keras Tuner, LightGBM, MXNet, Optuna, PaddlePaddle, PyTorch Ignite, SDB3, and XGBoost. | Experiment Tracking | [docs](https://aimstack.readthedocs.io/en/latest/apps/experiment_tracker.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/experiment_tracker) |
+| langchain_debugger   | Debugger for LangChain that logs LLMs prompts and generations, tools inputs/outputs, and chains metadata. | AI Systems Tracing  | [docs](https://aimos.readthedocs.io/en/latest/apps/langchain_debugger.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/langchain_debugger) |
+| llamaindex_observer  | Debugger and observer for LlamaIndex. Logs metadata like retrieval nodes, queries and responses, embeddings chunks, etc. | AI Systems Tracing  | [docs](https://aimos.readthedocs.io/en/latest/apps/llamaindex_observer.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/llamaindex_observer) |
+| experiment_tracker   | App for tracking and exploring ML experiments. Integrations with various ML libraries, including Acme, CatBoost, fastai, Hugging Face Transformers, Keras, Keras Tuner, LightGBM, MXNet, Optuna, PaddlePaddle, PyTorch Ignite, SDB3, and XGBoost. | Experiment Tracking | [docs](https://aimos.readthedocs.io/en/latest/apps/experiment_tracker.html) | [source](https://github.com/aimhubio/aimos/tree/main/pkgs/aimstack/experiment_tracker) |
 
 # 🏁 Quick start
 

@@ -53,6 +53,8 @@ class BaseLogger(Logger):
         train_metric_prefix (:obj:`str`, optional): Training metric prefix.
         val_metric_prefix (:obj:`str`, optional): Validation metric prefix.
         test_metric_prefix (:obj:`str`, optional): Testing metric prefix.
+        step_postfix (:obj:`str`, optional): Step interval postfix.
+        epoch_postfix (:obj:`str`, optional): Epoch interval postfix.
         run_name (:obj:`str`, optional): AimOS run name, for reusing the specified run.
         run_hash (:obj:`str`, optional): AimOS run hash, for reusing the specified run.
     """
@@ -65,6 +67,8 @@ class BaseLogger(Logger):
         train_metric_prefix: Optional[str] = 'train_',
         val_metric_prefix: Optional[str] = 'val_',
         test_metric_prefix: Optional[str] = 'test_',
+        step_postfix: Optional[str] = '_step',
+        epoch_postfix: Optional[str] = '_epoch',
         run_name: Optional[str] = None,
         run_hash: Optional[str] = None,
     ):
@@ -77,6 +81,8 @@ class BaseLogger(Logger):
         self._train_metric_prefix = train_metric_prefix
         self._val_metric_prefix = val_metric_prefix
         self._test_metric_prefix = test_metric_prefix
+        self.step_postfix = step_postfix
+        self.epoch_postfix = epoch_postfix
 
         self._run_name = run_name
         self._run_hash = run_hash
@@ -148,6 +154,14 @@ class BaseLogger(Logger):
         for k, v in metric_items.items():
             name = k
             context = {}
+
+            if self._step_postfix and name.endswith(self._step_postfix):
+                name = name[: -len(self._step_postfix)]
+                context["interval"] = "step"
+            elif self._epoch_postfix and name.endswith(self._epoch_postfix):
+                name = name[: -len(self._epoch_postfix)]
+                context["interval"] = "epoch"
+
 
             if self._train_metric_prefix and name.startswith(self._train_metric_prefix):
                 name = name[len(self._train_metric_prefix) :]

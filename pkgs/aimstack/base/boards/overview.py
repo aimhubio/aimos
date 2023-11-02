@@ -221,12 +221,12 @@ if run:
                 )
 
     col2.subheader("Information")
-    col2.text(f"Created at (date)")
-    col2.text(f"Created at (time)")
-    col2.text(f"Duration")
+    # col2.text(f"Created at (date)")
+    # col2.text(f"Created at (time)")
+    # col2.text(f"Duration")
     col2.text(f"Run hash: f{run.hash}")
 
-    col2.subheader("Tags")
+    # col2.subheader("Tags")
 
     col2.subheader("Description")
     col2.text(run.description)
@@ -236,10 +236,22 @@ if run:
     images = ImageSequence.filter(f'c.hash=="{c_hash}"')
     audios = AudioSequence.filter(f'c.hash=="{c_hash}"')
     texts = TextSequence.filter(f'c.hash=="{c_hash}"')
-    col2.table({
-        "component": ["Metrics", "Audios", "Texts", "Images",],
-        "quantity": [str(len(metrics_processed)), str(len(audios)), str(len(texts)), str(len(images))]
-    })
+    col2.table(
+        {
+            "component": [
+                "Metrics",
+                "Audios",
+                "Texts",
+                "Images",
+            ],
+            "quantity": [
+                str(len(metrics_processed)),
+                str(len(audios)),
+                str(len(texts)),
+                str(len(images)),
+            ],
+        }
+    )
 
     # row1.text("Notes")
     # row1.text("0")

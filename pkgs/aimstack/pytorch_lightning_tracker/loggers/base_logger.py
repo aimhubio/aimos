@@ -5,46 +5,56 @@ from typing import Any, Dict, Optional, Union
 import packaging.version
 
 try:
-    import pytorch_lightning as pl
+    import lightning as L
 
-    if packaging.version.parse(pl.__version__) < packaging.version.parse('1.7'):
-        from pytorch_lightning.loggers.base import \
-            LightningLoggerBase as Logger
-        from pytorch_lightning.loggers.base import rank_zero_experiment
-    else:
-        from pytorch_lightning.loggers.logger import (
-            Logger,
-            rank_zero_experiment,
+    from lightning.pytorch.loggers.logger import Logger, rank_zero_experiment
+    from lightning.pytorch.utilities.rank_zero import rank_zero_only
+
+except ImportError:
+    try:
+        import pytorch_lightning as pl
+
+        if packaging.version.parse(pl.__version__) < packaging.version.parse('1.7'):
+            from pytorch_lightning.loggers.base import (
+                LightningLoggerBase as Logger,
+                rank_zero_experiment,
+            )
+        else:
+            from pytorch_lightning.loggers.logger import (
+                Logger,
+                rank_zero_experiment,
+            )
+
+        from pytorch_lightning.utilities import rank_zero_only
+    except ImportError:
+        raise RuntimeError(
+            'This contrib module requires Lightning to be installed. '
+            'Please install version prior 2.0 via: \n pip install pytorch-lightning'
+            'Or for the newest version: \n pip install lightning'
         )
 
-    from pytorch_lightning.utilities import rank_zero_only
-except ImportError:
-    raise RuntimeError(
-        'This contrib module requires PyTorch Lightning to be installed. '
-        'Please install it with command: \n pip install lightning'
-    )
-
+from aimstack.experiment_tracker import TrainingRun
 from aimos import Repo
 from aimos._sdk.utils import clean_repo_path, get_aim_repo_name
-from aimstack.experiment_tracker import TrainingRun
+
 
 
 class BaseLogger(Logger):
     """
-    AimLogger logger class.
+    AimOSLogger logger class.
 
     Args:
-        repo (:obj:`str`, optional): Aim repository path or Repo object to which TrainingRun object is bound.
+        repo (:obj:`str`, optional): AimOS repository path or Repo object to which TrainingRun object is bound.
             If skipped, default Repo is used.
         experiment_name (:obj:`str`, optional): Sets TrainingRun's `experiment` property. 'default' if not specified.
             Can be used later to query runs/sequences.
         log_system_params (:obj:`bool`, optional): Enable/Disable logging of system params such as installed packages,
             git info, environment variables, etc.
         train_metric_prefix (:obj:`str`, optional): Training metric prefix.
-        val_metric_prefix (:obj:`str`, optional): validation metric prefix.
-        test_metric_prefix (:obj:`str`, optional): testing metric prefix.
-        run_name (:obj:`str`, optional): Aim run name, for reusing the specified run.
-        run_hash (:obj:`str`, optional): Aim run hash, for reusing the specified run.
+        val_metric_prefix (:obj:`str`, optional): Validation metric prefix.
+        test_metric_prefix (:obj:`str`, optional): Testing metric prefix.
+        run_name (:obj:`str`, optional): AimOS run name, for reusing the specified run.
+        run_hash (:obj:`str`, optional): AimOS run hash, for reusing the specified run.
     """
 
     def __init__(
@@ -121,27 +131,32 @@ class BaseLogger(Logger):
             self.experiment.set(('hparams', key), value, strict=False)
 
     @rank_zero_only
-    def log_metrics(self, metrics: Dict[str, float], step: Optional[int] = None):
+    def log_metrics(
+        self,
+        metrics: Dict[str, float],
+        step: Optional[int] = None,
+    ):
         assert rank_zero_only.rank == 0, 'experiment tried to log from global_rank != 0'
 
-        metric_items: Dict[str:Any] = {k: v for k, v in metrics.items()}
+        metric_items: Dict[str: Any] = {k: v for k, v in metrics.items()}
 
         if 'epoch' in metric_items:
-            epoch: int = metric_items.pop('epoch')
+            epoch: Optional[int] = metric_items.pop('epoch')
         else:
             epoch = None
 
         for k, v in metric_items.items():
             name = k
             context = {}
+
             if self._train_metric_prefix and name.startswith(self._train_metric_prefix):
-                name = name[len(self._train_metric_prefix):]
+                name = name[len(self._train_metric_prefix) :]
                 context['subset'] = 'train'
             elif self._test_metric_prefix and name.startswith(self._test_metric_prefix):
-                name = name[len(self._test_metric_prefix):]
+                name = name[len(self._test_metric_prefix) :]
                 context['subset'] = 'test'
             elif self._val_metric_prefix and name.startswith(self._val_metric_prefix):
-                name = name[len(self._val_metric_prefix):]
+                name = name[len(self._val_metric_prefix) :]
                 context['subset'] = 'val'
             self.experiment.track(
                 v, name=name, step=step, epoch=epoch, context=context
@@ -155,7 +170,7 @@ class BaseLogger(Logger):
             del self._run
             self._run = None
 
-    def __del__(self):
+    def __del__(self) -> None:
         self.finalize()
 
     @property
@@ -166,7 +181,7 @@ class BaseLogger(Logger):
         return None
 
     @property
-    def name(self) -> str:
+    def name(self) -> Optional[str]:
         return self._experiment_name
 
     @property

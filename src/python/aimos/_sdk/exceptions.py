@@ -1,6 +1,6 @@
 class MissingContainerError(RuntimeError):
     def __init__(self, hash_, mode):
-        msg = f'Filed to open Container {hash_} in mode={mode}. Container is missing.'
+        msg = f'Failed to open Container {hash_} in mode={mode}. Container is missing.'
         super().__init__(msg)
 
 

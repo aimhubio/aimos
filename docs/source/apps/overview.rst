@@ -71,5 +71,5 @@ The AI Systems Tracking apps are available in AimOS by default.
 It consists of a set of trackers that log AI systems executions and enable out-of-the-box observability.
 These apps seamlessly integrate with your existing AI pipelines.
 
-- `LlamaIndex Retriever <./llamaindex_retriever.html>`_
+- `LlamaIndex Retriever <./llamaindex_observer.html>`_
 - `LangChain Debugger <./langchain_debugger.html>`_

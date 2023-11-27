@@ -75,7 +75,7 @@ AimOS can get really powerful as you build your own logging apps.
   ./apps/overview.rst
   ./apps/base_app.rst
   ./apps/experiment_tracker.rst
-  ./apps/llamaindex_retriever.rst
+  ./apps/llamaindex_observer.rst
   ./apps/langchain_debugger.rst
 
 .. toctree::

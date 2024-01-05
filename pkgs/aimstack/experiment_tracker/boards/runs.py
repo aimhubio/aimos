@@ -31,10 +31,16 @@ def get_table_data(data=[], page_size=10, page_num=1, should_fold=True):
     table_data = {}
     exclude_keys = ['type', 'container_type', 'container_full_type']
 
-    runs = data[(page_num - 1) * page_size:page_num * page_size]
+    runs = data[(page_num - 1) * page_size : page_num * page_size]
+    run_meta_fields = {
+        "experiment": [],
+        "description": [],
+    }
 
     for run in runs:
         items = run.items() if should_fold else flatten(run).items()
+        run_meta_fields["experiment"].append(run.experiment)
+        run_meta_fields["description"].append(run.description)
         for key, value in items:
             if key in exclude_keys:
                 continue
@@ -43,6 +49,13 @@ def get_table_data(data=[], page_size=10, page_num=1, should_fold=True):
                     table_data[key].append(f'{value}')
                 else:
                     table_data[key] = [f'{value}']
+
+    table_data = (
+        {**run_meta_fields, **table_data}
+        if "hash" not in table_data
+        else {"hash": table_data.pop("hash"), **run_meta_fields, **table_data}
+    )
+
     return table_data
 
 
@@ -50,15 +63,18 @@ row1, row2 = ui.rows(2)
 
 with row1:
     items_per_page = ui.select(
-        'Items per page', options=('5', '10', '50', '100'), index=1)
+        'Items per page', options=('5', '10', '50', '100'), index=1
+    )
     page_num = ui.number_input(
-        'Page', value=1, min=1, max=int(len(runs) / int(items_per_page)) + 1)
-    cols_folding = ui.toggle_button(label='Columns folding',
-                                    left_value='Fold',
-                                    right_value='Unfold',
-                                    index=1
-                                    )
+        'Page', value=1, min=1, max=int(len(runs) / int(items_per_page)) + 1
+    )
+    cols_folding = ui.toggle_button(
+        label='Columns folding', left_value='Fold', right_value='Unfold', index=1
+    )
 
-row2.table(get_table_data(runs, int(items_per_page), page_num, cols_folding == 'Fold'), {
-    'hash': lambda val: ui.board_link('run.py', val, state={'container_hash': val}),
-})
+row2.table(
+    get_table_data(runs, int(items_per_page), page_num, cols_folding == 'Fold'),
+    {
+        'hash': lambda val: ui.board_link('run.py', val, state={'container_hash': val}),
+    },
+)

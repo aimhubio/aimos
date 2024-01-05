@@ -81,8 +81,7 @@ if figures_flat_list:
 
     table_data = get_table_data(
         data=figures_flat_list,
-        keys=['name', 'container.hash', 'context',
-              'format', 'range', 'data', 'step'],
+        keys=['name', 'data', 'context', 'step', 'range', 'format'],
         page_size=int(items_per_page),
         page_num=int(page_num)
     )

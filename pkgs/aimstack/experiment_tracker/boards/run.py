@@ -1,5 +1,6 @@
 from experiment_tracker import TrainingRun
 
+
 c_hash = session_state.get('container_hash')
 
 if c_hash is None:
@@ -35,15 +36,18 @@ def merge_dicts(dict1, dict2):
     return merged_dict
 
 
+
 if run:
-    params_tab, metrics_tab, audios_tab, texts_tab, images_tab, figures_tab = ui.tabs(('Params', 'Metrics', 'Audios',
-                                                                                      'Texts', 'Images', 'Figures'))
+    overview_tab, params_tab, metrics_tab, audios_tab, texts_tab, images_tab, figures_tab, settings_tab = ui.tabs(('Overview', 'Params', 'Metrics', 'Audios', 'Texts', 'Images', 'Figures', 'Settings'))
+                
+    with overview_tab:
+        overview = ui.board('base:overview.py', state={'container_hash': c_hash})
+
     with params_tab:
-        params = run
-        if params is None:
+        if run is None:
             ui.text('No parameters found')
         else:
-            ui.json(params)
+            ui.json(run)
     with metrics_tab:
         metrics = ui.board('base:metrics.py', state={'container_hash': c_hash})
     with audios_tab:
@@ -54,3 +58,5 @@ if run:
         images = ui.board('base:images.py', state={'container_hash': c_hash})
     with figures_tab:
         figures = ui.board('base:figures.py', state={'container_hash': c_hash})
+    with settings_tab:
+        settings = ui.board('base:settings.py', state={'container_hash': c_hash})

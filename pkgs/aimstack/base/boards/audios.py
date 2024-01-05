@@ -82,8 +82,7 @@ if audios_flat_list:
 
     table_data = get_table_data(
         data=audios_flat_list,
-        keys=['name', 'container.hash', 'context',
-              'format', 'range', 'data'],
+        keys=['name', 'data', 'context', 'range', 'format'],
         page_size=int(items_per_page),
         page_num=int(page_num)
     )

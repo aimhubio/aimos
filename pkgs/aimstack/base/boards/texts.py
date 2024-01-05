@@ -81,14 +81,12 @@ if texts_flat_list:
 
     table_data = get_table_data(
         data=texts_flat_list,
-        keys=['name', 'container.hash', 'context',
-              'format', 'range', 'data'],
+        keys=['name', 'data', 'context', 'range', 'format'],
         page_size=int(items_per_page),
         page_num=int(page_num)
     )
 
     row2.table(table_data, {
-        'container.hash': lambda val: ui.board_link('run.py', val, state={'container_hash': val}),
         'data': lambda val: ui.texts([texts_flat_list[int(val)]])
     })
 else:

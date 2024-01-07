@@ -6,7 +6,7 @@ A high-level overview on how AimOS works and what are the benefits of using AimO
 How AimOS works
 =============
 
-One of the principles of building AimOS is: simple first, then poweful.
+One of the principles of building AimOS is: simple first, then powerful.
 For the first time users, AimOS is a simple easy-to-use logger that's fully equipped to handle the most immediate experiment tracking, ai systems tracing needs.
 It's also well integrated with the most popular ML and LLM frameworks.
 
